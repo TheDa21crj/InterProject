@@ -1,0 +1,14 @@
+.sMdiv {
+  width: 400px;
+  height: 45vh;
+  overflow-y: scroll;
+  margin: 5% 0% 2% 3%;
+}
+
+#searchInp,
+.formImp {
+  outline: none;
+  width: 94%;
+  padding: 2%;
+  font-size: 1.2rem;
+}

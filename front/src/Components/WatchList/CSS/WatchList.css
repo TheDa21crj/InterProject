@@ -1,0 +1,17 @@
+.WatchmDiv {
+  width: 400px;
+  height: 45vh;
+  overflow-y: scroll;
+  margin: 5% 0% 2% 3%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+.pTagVal {
+  font-size: 1.5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  padding: 2%;
+}
