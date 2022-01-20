@@ -1,0 +1,33 @@
+#NotemTDiv {
+  width: 400px;
+  margin-left: 40px;
+  margin-top: 3%;
+  height: 45vh;
+  overflow-y: scroll;
+}
+
+.NoteTDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+.NMapDiv {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  word-wrap: break-word;
+  padding: 2%;
+}
+
+.TitleDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
