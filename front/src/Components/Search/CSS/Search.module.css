@@ -12,3 +12,16 @@
   padding: 2%;
   font-size: 1.2rem;
 }
+
+.hoverIcons {
+  opacity: 0;
+  visibility: hidden;
+  margin-top: -35px;
+  margin-left: 300px;
+  cursor: pointer;
+}
+
+.form:hover > .hoverIcons {
+  opacity: 1;
+  visibility: visible;
+}

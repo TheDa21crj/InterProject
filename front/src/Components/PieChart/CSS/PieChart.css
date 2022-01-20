@@ -15,6 +15,7 @@
     );
   min-width: 300px;
   min-height: 450px;
+  margin-top: -25%;
 }
 
 #item1,
@@ -49,4 +50,11 @@
 
 #item5 {
   background: #10ac84;
+}
+
+.PieChartmDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5%;
 }

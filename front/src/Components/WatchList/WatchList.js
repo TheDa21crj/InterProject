@@ -1,6 +1,11 @@
 import React from "react";
 import "./CSS/WatchList.css";
 import JSONDATA from "./../../Data/showList.json";
+import ShareIcon from '@material-ui/icons/Share';
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
+import CheckIcon from '@material-ui/icons/Check';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 export default function WatchList() {
   const getData = async function (e) {
@@ -14,7 +19,15 @@ export default function WatchList() {
           return (
             <div>
               <div key={key}>
-                <p clcasName="pTagVal">{value.name}</p>
+                <p id="pTagVal">{value.name}
+                  <div className="WiconsDiv">
+                    <ShareIcon />
+                    <EditIcon />
+                    <DeleteIcon />
+                    <CheckIcon />
+                    <MoreHorizIcon />
+                  </div>
+                </p>
               </div>
             </div>
           );
