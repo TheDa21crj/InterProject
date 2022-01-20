@@ -1,0 +1,52 @@
+.pie-chart {
+  background: radial-gradient(circle closest-side, transparent 60%, white 0),
+    conic-gradient(
+      from 180deg,
+      #ee5253 0,
+      #ee5253 35%,
+      #ff9f43 0,
+      #ff9f43 60%,
+      #f368e0 0,
+      #f368e0 75%,
+      #0abde3 0,
+      #0abde3 89%,
+      #10ac84 0,
+      #10ac84 100%
+    );
+  min-width: 300px;
+  min-height: 450px;
+}
+
+#item1,
+#item2,
+#item3,
+#item4,
+#item5 {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+#item1 {
+  background: #ee5253;
+}
+
+#item2 {
+  background: #ff9f43;
+}
+
+#item3 {
+  background: #f368e0;
+}
+
+#item4 {
+  background: #0abde3;
+}
+
+#item5 {
+  background: #10ac84;
+}
