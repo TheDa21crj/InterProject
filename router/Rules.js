@@ -1,6 +1,6 @@
 const express = require("express");
-const router = express.Router();
 const fs = require("fs");
+const router = express.Router();
 const { check, validationResult } = require("express-validator");
 const Connect = require("../module/Rules");
 
