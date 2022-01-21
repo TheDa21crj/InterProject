@@ -39,4 +39,19 @@ router.get("/show", async (req, res) => {
   res.send(data);
 });
 
+router.delete(
+  "/delete",
+  [check("title", "title is required")],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    const { title } = req.body;
+    const data = await Connect.findOne({ title: title });
+    const dataDelete = await Connect.deleteOne({ _id: data._id });
+    res.send({ dataDelete });
+  }
+);
+
 module.exports = router;

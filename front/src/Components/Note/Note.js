@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css";
 import AddIcon from "@material-ui/icons/Add";
-import DeleteIcon from "@material-ui/icons/Delete";
+// import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
+import img0 from "./../../Req img/bin.jpg";
 
 export default function Note() {
   const [show, setShow] = useState(false);
@@ -41,7 +42,23 @@ export default function Note() {
     const data = await response.json();
   };
   const deletaData = async function (e) {
-    console.log(e.target);
+    const title = e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
+    // const des = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
+    try {
+      await fetch("http://localhost:5000");
+      const r = await fetch("/api/notemaker/delete", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title,
+        }),
+      });
+      getData(e);
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div id="NotemTDiv">
@@ -56,13 +73,22 @@ export default function Note() {
           return (
             <div key={key} className="NMapDiv" onClick={getData}>
               <div className="TitleDiv">
-                <p className="pTagT">{value.title}</p>
-                <p>{value.date}</p>
+                <form method="DELETE">
+                  <input type="text" name="" id="" value={value.title} />
+                  <input type="text" name="" id="" value={value.date} />
+                </form>
               </div>
-              <div>{value.des}</div>
+              <form method="DELETE">
+                <textarea name="" id="" cols="30" rows="10" value={value.des}></textarea>
+              </form>
               <div className="iconsHover">
                 <EditIcon />
-                <DeleteIcon />
+                <img
+                  src={img0}
+                  alt=""
+                  className="deleteImg"
+                  onClick={deletaData}
+                />
               </div>
             </div>
           );
