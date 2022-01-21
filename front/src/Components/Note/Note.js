@@ -69,7 +69,7 @@ export default function Note() {
     oldDes = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
     document.getElementById("title").value = oldTitle;
     document.getElementById("des").value = oldDes;
-    console.log(document.getElementById("title").value);
+    console.log(document.getElementById("title").value + "\t" + document.getElementById("des").value);
   }
   return (
     <div id="NotemTDiv">
