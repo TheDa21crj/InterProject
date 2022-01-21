@@ -62,10 +62,14 @@ export default function Note() {
     }
   };
 
+  let oldTitle, oldDes;
   const editData = async function (e) {
-    setShowEdit(!showEdit);
-    const oldTitle = e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
-    const oldDes = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
+    await setShowEdit(!showEdit);
+    oldTitle = e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
+    oldDes = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
+    document.getElementById("title").value = oldTitle;
+    document.getElementById("des").value = oldDes;
+    console.log(document.getElementById("title").value);
   }
   return (
     <div id="NotemTDiv">
@@ -102,8 +106,8 @@ export default function Note() {
                   <div className="editMDiv">
                     <div>
                       <form method="PUT">
-                        <input type="text" name="" id="" />
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <input type="text" name="" id="title" />
+                        <textarea name="" id="des" cols="30" rows="10"></textarea>
                       </form>
                       <div>
                         <button onClick={() => { setShowEdit(false) }}>Close</button>
