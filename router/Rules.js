@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const fs = require("fs");
 const { check, validationResult } = require("express-validator");
 const Connect = require("../module/Rules");
 
@@ -21,6 +22,19 @@ router.post(
     }
   }
 );
+
+router.get("/show", async (req, res) => {
+  let data = await Connect.find();
+  fs.writeFile(
+    "./front/src/Data/Showrule.json",
+    JSON.stringify(data),
+    (err) => {
+      console.log("done");
+      console.log(err);
+    }
+  );
+  res.send(data);
+});
 
 router.delete("/delete", async (req, res) => {
   const dataDelete = await Connect.deleteMany({});
