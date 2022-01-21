@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css";
 import AddIcon from "@material-ui/icons/Add";
-// import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import img0 from "./../../Req img/bin.jpg";
+import img1 from "./../../Req img/pen.jpg";
 
 export default function Note() {
   const [show, setShow] = useState(false);
+  const [showEdit, setShowEdit] = useState(false);
 
   const postData = async function (e) {
     setShow(false);
@@ -41,9 +42,9 @@ export default function Note() {
     const response = await fetch("http://localhost:5000/api/notemaker/show");
     const data = await response.json();
   };
+
   const deletaData = async function (e) {
     const title = e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
-    // const des = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
     try {
       await fetch("http://localhost:5000");
       const r = await fetch("/api/notemaker/delete", {
@@ -60,6 +61,12 @@ export default function Note() {
       console.log(error);
     }
   };
+
+  const editData = async function (e) {
+    setShowEdit(!showEdit);
+    const oldTitle = e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
+    const oldDes = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
+  }
   return (
     <div id="NotemTDiv">
       <div className="NoteTDiv">
@@ -82,7 +89,7 @@ export default function Note() {
                 <textarea name="" id="" cols="30" rows="10" value={value.des}></textarea>
               </form>
               <div className="iconsHover">
-                <EditIcon />
+                <img src={img1} alt="" className="iconEdit" onClick={editData} />
                 <img
                   src={img0}
                   alt=""
@@ -90,6 +97,21 @@ export default function Note() {
                   onClick={deletaData}
                 />
               </div>
+              {
+                showEdit ? (
+                  <div className="editMDiv">
+                    <div>
+                      <form method="PUT">
+                        <input type="text" name="" id="" />
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                      </form>
+                      <div>
+                        <button onClick={() => { setShowEdit(false) }}>Close</button>
+                        <button>Edit</button>
+                      </div>
+                    </div>
+                  </div>) : null
+              }
             </div>
           );
         })}

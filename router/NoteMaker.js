@@ -54,4 +54,27 @@ router.delete(
   }
 );
 
+router.put(
+  "/update",
+  [check("title", "title is required")],
+  [check("des", "des is required")],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    const { title, des } = req.body;
+    const data = await Connect.findOne({ title: title });
+    const result = await Connect.updateOne(
+      { _id: data._id },
+      {
+        $set: {
+          des: des,
+        },
+      }
+    );
+    res.send(result);
+  }
+);
+
 module.exports = router;
