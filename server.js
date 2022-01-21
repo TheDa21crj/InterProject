@@ -25,6 +25,7 @@ app.get("/", (req, res) => {
 app.use("/api/watchlist", require("./router/watchlist"));
 app.use("/api/showwatchList", require("./router/ShowWatchList"));
 app.use("/api/notemaker", require("./router/NoteMaker"));
+app.use("/api/rules", require("./router/Rules"));
 
 const port = process.env.PORT || 5000;
 
