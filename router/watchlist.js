@@ -13,10 +13,6 @@ router.post(
     }
     const { name } = req.body;
     try {
-      // const nameE = await Connect.findOne({ name: name });
-      // if (nameE) {
-      //   return res.status(400).json({ message: `Data exists ${nameE}` });
-      // }
       let watchlistData = new Connect({ name });
       await watchlistData.save();
       res.send(`Hello world ${name}`);
