@@ -41,4 +41,23 @@ router.delete("/delete", async (req, res) => {
   res.send({ dataDelete });
 });
 
+router.delete(
+  "/delete/one",
+  [check("rule", "rule is required")],
+  async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+    const { rule } = req.body;
+    const data = await Connect.findOne({ rule: rule });
+    if (data) {
+      const dataDelete = await Connect.deleteOne({ _id: data._id });
+    } else {
+      return res.send({ message: "Data does not exists" });
+    }
+    res.send({ dataDelete });
+  }
+);
+
 module.exports = router;

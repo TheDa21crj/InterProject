@@ -46,17 +46,19 @@ export default function Rule() {
 
     const getValue = async function (e) {
         if (e.target.checked === true) {
-            if (objValue.find(`${e.target.parentNode.childNodes[1].firstChild.value}`)) {
-                objValue.push(e.target.parentNode.childNodes[1].firstChild.value);
-                console.log(objValue);
-            }
+            // if (objValue.find(element => element = e.target.parentNode.childNodes[1].firstChild.value)) {
+            objValue.push(e.target.parentNode.childNodes[1].firstChild.value);
+            console.log(objValue);
+            return objValue;
+            // }
             // console.log(objValue.find(e.target.parentNode.childNodes[1].firstChild.value));
         }
     }
 
     const deleteData = async function (e) {
         if (check == false) {
-            console.log(e.target);
+            let valData = getValue(e);
+            console.log(valData);
         } else {
             try {
                 await fetch("http://localhost:5000");
