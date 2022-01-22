@@ -42,23 +42,14 @@ export default function Rule() {
         }
     }
 
-    let objValue = [];
-
     const getValue = async function (e) {
         if (e.target.checked === true) {
-            // if (objValue.find(element => element = e.target.parentNode.childNodes[1].firstChild.value)) {
-            objValue.push(e.target.parentNode.childNodes[1].firstChild.value);
-            console.log(objValue);
-            return objValue;
-            // }
-            // console.log(objValue.find(e.target.parentNode.childNodes[1].firstChild.value));
+            console.log(e.target.parentNode.childNodes[1].parentNode);
         }
     }
 
     const deleteData = async function (e) {
-        if (check == false) {
-            let valData = getValue(e);
-            console.log(valData);
+        if (check === false) {
         } else {
             try {
                 await fetch("http://localhost:5000");
@@ -89,7 +80,7 @@ export default function Rule() {
                 {JSONDATA.map((value, key) => {
                     return (
                         <div>
-                            <div>
+                            <div key={key}>
                                 {
                                     check ? (<div>
                                         <input type="checkbox" name="" id="ckeckIt" checked />
@@ -97,7 +88,7 @@ export default function Rule() {
                                             <input type="text" name="" id="" value={value.rule} />
                                         </form>
                                     </div>) : (
-                                        <div>
+                                        <div id="RradioUnChecked">
                                             <input type="checkbox" name="" id="ckeckIt" onClick={getValue} />
                                             <form method="DELETE">
                                                 <input type="text" name="" id="" value={value.rule} />
