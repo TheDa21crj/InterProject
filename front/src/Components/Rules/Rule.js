@@ -40,12 +40,17 @@ export default function Rule() {
             getData(e);
         }
     }
+
+    const slelctAll = async function (e) {
+        const a = document.getElementsByClassName("ckeckIt").checked = true;
+        console.log(a);
+    }
     return (
         <div onClick={getData} className="RmDiv">
             <div className="iconsTile">
                 <div>Rules</div>
                 <div>
-                    <img src={tickIcon} alt="" id="RtickIcon" />
+                    <img src={tickIcon} alt="" id="RtickIcon" onClick={slelctAll} />
                     <img src={addIcon} alt="" id="RaddIcon" onClick={() => setShow(!show)} />
                     <img src={deleteIcon} alt="" id="RdeleteIcon" />
                 </div>
