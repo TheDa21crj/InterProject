@@ -42,26 +42,45 @@ export default function Rule() {
         }
     }
 
-    const slelctAll = async function (e) {
-        const a = document.getElementsByClassName("ckeckIt").checked = true;
-        console.log(a);
+    const deleteData = async function (e) {
+        if (check == false) { } else {
+            try {
+                await fetch("http://localhost:5000");
+                const r = await fetch("/api/rules/delete", {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({}),
+                });
+                getData(e);
+            } catch (error) {
+                console.log(error);
+            }
+        }
     }
     return (
         <div onClick={getData} className="RmDiv">
             <div className="iconsTile">
                 <div>Rules</div>
                 <div>
-                    <img src={tickIcon} alt="" id="RtickIcon" onClick={slelctAll} />
+                    <img src={tickIcon} alt="" id="RtickIcon" onClick={() => setCheck(!check)} />
                     <img src={addIcon} alt="" id="RaddIcon" onClick={() => setShow(!show)} />
-                    <img src={deleteIcon} alt="" id="RdeleteIcon" />
+                    <img src={deleteIcon} alt="" id="RdeleteIcon" onClick={deleteData} />
                 </div>
             </div>
             <div>
                 {JSONDATA.map((value, key) => {
                     return (
                         <div>
-                            <input type="radio" name="" className="ckeckIt" />
-                            <form action="">
+                            <div >
+                                {
+                                    check ? (<input type="checkbox" name="" id="ckeckIt" checked />) : (
+                                        <input type="checkbox" name="" id="ckeckIt" />
+                                    )
+                                }
+                            </div>
+                            <form method="DELETE">
                                 <input type="text" name="" id="" value={value.rule} />
                             </form>
                         </div>
