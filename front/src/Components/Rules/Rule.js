@@ -14,6 +14,7 @@ export default function Rule() {
     };
 
     const postData = async function (e) {
+        setShow(false);
         const rule = document.getElementById("textAdd").value;
         console.log(rule);
         try {
@@ -28,6 +29,7 @@ export default function Rule() {
                 }),
             });
             const data = await r.json();
+            getData(e);
             if (!data.status) {
                 console.log("Data Poster");
             } else {
