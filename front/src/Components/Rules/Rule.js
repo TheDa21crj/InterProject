@@ -42,8 +42,22 @@ export default function Rule() {
         }
     }
 
+    let objValue = [];
+
+    const getValue = async function (e) {
+        if (e.target.checked === true) {
+            if (objValue.find(`${e.target.parentNode.childNodes[1].firstChild.value}`)) {
+                objValue.push(e.target.parentNode.childNodes[1].firstChild.value);
+                console.log(objValue);
+            }
+            // console.log(objValue.find(e.target.parentNode.childNodes[1].firstChild.value));
+        }
+    }
+
     const deleteData = async function (e) {
-        if (check == false) { } else {
+        if (check == false) {
+            console.log(e.target);
+        } else {
             try {
                 await fetch("http://localhost:5000");
                 const r = await fetch("/api/rules/delete", {
@@ -73,18 +87,27 @@ export default function Rule() {
                 {JSONDATA.map((value, key) => {
                     return (
                         <div>
-                            <div >
+                            <div>
                                 {
-                                    check ? (<input type="checkbox" name="" id="ckeckIt" checked />) : (
-                                        <input type="checkbox" name="" id="ckeckIt" />
+                                    check ? (<div>
+                                        <input type="checkbox" name="" id="ckeckIt" checked />
+                                        <form method="DELETE">
+                                            <input type="text" name="" id="" value={value.rule} />
+                                        </form>
+                                    </div>) : (
+                                        <div>
+                                            <input type="checkbox" name="" id="ckeckIt" onClick={getValue} />
+                                            <form method="DELETE">
+                                                <input type="text" name="" id="" value={value.rule} />
+                                            </form>
+                                        </div>
                                     )
                                 }
                             </div>
-                            <form method="DELETE">
-                                <input type="text" name="" id="" value={value.rule} />
-                            </form>
+
                         </div>
                     )
+
                 })}
             </div>
             {
