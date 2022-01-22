@@ -7,19 +7,19 @@ import Note from "./../Components/Note/Note";
 import Rule from "./../Components/Rules/Rule";
 
 export default function Home() {
-    return (
-        <div className={HoCss.Hmdiv}>
-            <div>
-                <Search />
-                <WatchList />
-            </div>
-            <div>
-                <PieChart />
-            </div>
-            <div>
-                <Note />
-                <Rule />
-            </div>
-        </div>
-    );
+  return (
+    <div className={HoCss.Hmdiv}>
+      <div>
+        <Search />
+        <WatchList />
+      </div>{" "}
+      <div>
+        <PieChart />
+      </div>{" "}
+      <div>
+        <Note />
+        <Rule />
+      </div>{" "}
+    </div>
+  );
 }
