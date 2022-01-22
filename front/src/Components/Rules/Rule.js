@@ -7,6 +7,7 @@ import deleteIcon from "./../../Req img/bin.jpg";
 
 export default function Rule() {
     const [show, setShow] = useState(false);
+    const [check, setCheck] = useState(false);
 
     const getData = async function (e) {
         const response = await fetch("http://localhost:5000/api/rules/show");
