@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css";
+import NoteBox from "./NoteBox";
 import AddIcon from "@material-ui/icons/Add";
 import EditIcon from "@material-ui/icons/Edit";
 import img0 from "./../../Req img/bin.jpg";
@@ -9,7 +10,7 @@ import img1 from "./../../Req img/pen.jpg";
 export default function Note() {
   const [show, setShow] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
-  const infutRef = useRef();
+  const inputRef = useRef();
 
   const postData = async function (e) {
     setShow(false);
@@ -66,6 +67,7 @@ export default function Note() {
 
   var oldTitle, oldDes;
   const editData = async function (e) {
+    // console.log(inputRef.current);
     await setShowEdit(!showEdit);
     oldTitle =
       e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
@@ -98,6 +100,7 @@ export default function Note() {
               </div>
               <form method="DELETE">
                 <textarea
+                  ref={inputRef}
                   name=""
                   id=""
                   cols="30"
