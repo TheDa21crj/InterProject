@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css";
 import AddIcon from "@material-ui/icons/Add";
@@ -9,6 +9,7 @@ import img1 from "./../../Req img/pen.jpg";
 export default function Note() {
   const [show, setShow] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+  const infutRef = useRef();
 
   const postData = async function (e) {
     setShow(false);
@@ -63,7 +64,7 @@ export default function Note() {
     }
   };
 
-  let oldTitle, oldDes;
+  var oldTitle, oldDes;
   const editData = async function (e) {
     await setShowEdit(!showEdit);
     oldTitle =
@@ -80,22 +81,21 @@ export default function Note() {
   return (
     <div id="NotemTDiv">
       <div className="NoteTDiv">
-        <p> Note </p>{" "}
+        <p> Note </p>
         <div>
           <AddIcon onClick={() => setShow(!show)} className="addIcons" />
-        </div>{" "}
-      </div>{" "}
+        </div>
+      </div>
       <div>
-        {" "}
         {JSONDATA.map((value, key) => {
           return (
             <div key={key} className="NMapDiv" onClick={getData}>
               <div className="TitleDiv">
                 <form method="DELETE">
-                  <input type="text" name="" id="" value={value.title} />{" "}
-                  <input type="text" name="" id="" value={value.date} />{" "}
-                </form>{" "}
-              </div>{" "}
+                  <input type="text" name="" id="" value={value.title} />
+                  <input type="text" name="" id="" value={value.date} />
+                </form>
+              </div>
               <form method="DELETE">
                 <textarea
                   name=""
@@ -103,73 +103,69 @@ export default function Note() {
                   cols="30"
                   rows="10"
                   value={value.des}
-                ></textarea>{" "}
-              </form>{" "}
+                ></textarea>
+              </form>
               <div className="iconsHover">
                 <img
                   src={img1}
                   alt=""
                   className="iconEdit"
                   onClick={editData}
-                />{" "}
+                />
                 <img
                   src={img0}
                   alt=""
                   className="deleteImg"
                   onClick={deletaData}
-                />{" "}
-              </div>{" "}
+                />
+              </div>
               {showEdit ? (
                 <div className="editMDiv">
                   <div>
                     <form method="PUT">
                       <input type="text" name="" id="title" />
-                      <textarea name="" id="des" cols="30" rows="10">
-                        {" "}
-                      </textarea>{" "}
-                    </form>{" "}
+                      <textarea name="" id="des" cols="30" rows="10"></textarea>
+                    </form>
                     <div>
                       <button
                         onClick={() => {
                           setShowEdit(false);
                         }}
                       >
-                        Close{" "}
-                      </button>{" "}
-                      <button> Edit </button>{" "}
-                    </div>{" "}
-                  </div>{" "}
+                        Close
+                      </button>
+                      <button> Edit </button>
+                    </div>
+                  </div>
                 </div>
-              ) : null}{" "}
+              ) : null}
             </div>
           );
-        })}{" "}
+        })}
         {show ? (
           <div className="modalMDiv">
             <div className="popDiv">
               <form className="form">
                 <input type="text" name="" id="inpTag" />
-                <textarea name="" cols="30" rows="10" id="TextTag">
-                  {" "}
-                </textarea>{" "}
-              </form>{" "}
+                <textarea name="" cols="30" rows="10" id="TextTag"></textarea>
+              </form>
               <div className="DivBtn">
                 <button id="BtnClose" onClick={() => setShow(false)}>
-                  Close{" "}
-                </button>{" "}
+                  Close
+                </button>
                 <button
                   id="AddBtn"
                   onClick={(e) => {
                     postData(e);
                   }}
                 >
-                  Add{" "}
-                </button>{" "}
-              </div>{" "}
-            </div>{" "}
+                  Add
+                </button>
+              </div>
+            </div>
           </div>
-        ) : null}{" "}
-      </div>{" "}
+        ) : null}
+      </div>
     </div>
   );
 }

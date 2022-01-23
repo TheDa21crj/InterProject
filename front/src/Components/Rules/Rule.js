@@ -42,9 +42,28 @@ export default function Rule() {
         }
     }
 
+    var objData = [];
+
     const getValue = async function (e) {
         if (e.target.checked === true) {
-            console.log(e.target.parentNode.childNodes[1].parentNode);
+            // objData.push(e.target.parentNode.childNodes[1].childNodes[0].value);
+            const rule = e.target.parentNode.childNodes[1].childNodes[0].value
+            try {
+                await fetch("http://localhost:5000");
+                const r = await fetch("/api/rules/delete/one", {
+                    method: "DELETE",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        rule,
+                    }),
+                });
+                getData(e);
+            } catch (error) {
+                console.log(error);
+                getData(e);
+            }
         }
     }
 
