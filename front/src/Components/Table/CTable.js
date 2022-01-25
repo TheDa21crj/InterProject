@@ -8,19 +8,12 @@ export default function CTable(props) {
     // const totalPrice = useRef();
     useEffect(() => {
         setInterval(() => {
-            let p1 = setprice1(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
-            let p2 = setprice2(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
-            let p3 = setprice3(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
-            let pr = parseInt(p1) * parseInt(props.quantity1);
-            // setTotal(p1 + 1);
-            console.log(pr);
-            // setTotal(() => setprice1(Math.floor(Math.random() * (120 - 20 + 1)) + 20) + setprice2(Math.floor(Math.random() * (120 - 20 + 1)) + 20) + setprice3(Math.floor(Math.random() * (120 - 20 + 1)) + 20))
-            // setTotal((p1 * parseInt(props.quantity1)) +
-            //     (p2 * parseInt(props.quantity2)) +
-            //     (p3 * parseInt(props.quantity3)))
-            // console.log((p1 * props.quantity1) + (p2 * props.quantity2) + (p3 * props.quantity3));
+            setprice1(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
+            setprice2(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
+            setprice3(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
+            setTotal((price1 * (Number(props.quantity1))) + (price2 * (Number(props.quantity2))) + (price3 * (Number(props.quantity3))))
+
         }, 1000);
-        // console.log((price1 * parseInt(props.quantity1)) + (price2 * parseInt(props.quantity2)) + (price3 * parseInt(props.quantity3)));
     }, [])
 
     return <div >
