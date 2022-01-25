@@ -9,6 +9,7 @@ import Edit from "./Edit"
 export default function Note() {
   const [show, setShow] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+  const [showID, setShowID] = useState();
 
   const postData = async function (e) {
     setShow(false);
@@ -64,7 +65,8 @@ export default function Note() {
   };
 
   const editData = async function (e) {
-    await setShowEdit(!showEdit);
+    setShowID(e);
+    console.log(e);
   };
 
   return (
@@ -78,7 +80,7 @@ export default function Note() {
       <div>
         {JSONDATA.map((value, key) => {
           return (
-            <div key={key} className="NMapDiv" onClick={getData}>
+            <div key={key} className="NMapDiv" onClick={getData} id={value._id}>
               <div className="TitleDiv">
                 <form method="DELETE" className="NfomDelete">
                   <input type="text" name="" id="title" value={value.title} />
@@ -94,13 +96,12 @@ export default function Note() {
                   value={value.des}
                 ></textarea>
               </form>
-              <p className="idP">{value._id}</p>
               <div className="iconsHover">
                 <img
                   src={img1}
                   alt=""
                   className="iconEdit"
-                  onClick={editData}
+                  onClick={() => editData(value._id)}
                 />
                 <img
                   src={img0}
@@ -110,25 +111,10 @@ export default function Note() {
                 />
               </div>
               <div>
-                {showEdit ? (
-                  <div id="displayEditNone">
-                    <div>
-                      <div>
-                        <input type="text" name="" id="" value={value.title} />
-                        <textarea name="" id="" cols="30" rows="10">
-                          {value.des}
-                        </textarea>
-                      </div>
-                      <div>
-                        <button>Close</button>
-                        <button>Add</button>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
               </div>
             </div>
           );
+
         })}
         {show ? (
           <div className="modalMDiv">
@@ -154,7 +140,9 @@ export default function Note() {
           </div>
         ) : null}
       </div>
-
+      {
+        showID && (<Edit valNote={showID} idM={setShowID} />)
+      }
     </div>
   );
 }
