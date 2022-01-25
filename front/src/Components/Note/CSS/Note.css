@@ -140,3 +140,11 @@
 .idP {
   display: none;
 }
+
+#displayEditNone {
+  display: none;
+}
+
+#displayEdit {
+  display: block;
+}

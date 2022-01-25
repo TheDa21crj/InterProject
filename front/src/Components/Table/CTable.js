@@ -12,8 +12,7 @@ export default function CTable(props) {
       setprice2(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
       setprice3(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
       setTotal(
-        total +
-          price1 * Number(props.quantity1) +
+        price1 * Number(props.quantity1) +
           price2 * Number(props.quantity2) +
           price3 * Number(props.quantity3)
       );

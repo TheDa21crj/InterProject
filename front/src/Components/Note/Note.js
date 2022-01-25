@@ -64,8 +64,7 @@ export default function Note() {
   };
 
   const editData = async function (e) {
-    setShowEdit(!showEdit);
-
+    await setShowEdit(!showEdit);
   };
   return (
     <div id="NotemTDiv">
@@ -108,6 +107,23 @@ export default function Note() {
                   className="deleteImg"
                   onClick={deletaData}
                 />
+              </div>
+              <div>
+                {
+                  showEdit ? (
+                    <div id="displayEditNone">
+                      <div>
+                        <div>
+                          <input type="text" name="" id="" value={value.title} />
+                          <textarea name="" id="" cols="30" rows="10">{value.des}</textarea>
+                        </div>
+                        <div>
+                          <button>Close</button>
+                          <button>Add</button></div>
+                      </div>
+                    </div>
+                  ) : null
+                }
               </div>
             </div>
           );
