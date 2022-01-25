@@ -1,11 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function CTable(props) {
   const [price1, setprice1] = useState(100);
   const [price2, setprice2] = useState(80);
   const [price3, setprice3] = useState(100);
   const [total, setTotal] = useState(54000);
-  // const totalPrice = useRef();
   useEffect(() => {
     setInterval(() => {
       setprice1(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
@@ -20,16 +19,16 @@ export default function CTable(props) {
   }, []);
 
   return (
-    <div>
-      <p>{props.TableName}</p>
+    <div className="CTmDiv">
+      <p id="tablename">{props.TableName}</p>
       <table border="1" className="table">
         <tr>
-          <th>
+          <th className="topRow">
             <input type="checkbox" value="" />
           </th>
-          <th>Product</th>
-          <th>Quantity</th>
-          <th>Price</th>
+          <th className="topRow">Product</th>
+          <th className="topRow">Quantity</th>
+          <th className="topRow">Price</th>
         </tr>
         <tr>
           <th>
