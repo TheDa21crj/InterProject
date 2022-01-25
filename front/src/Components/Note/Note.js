@@ -1,7 +1,6 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css";
-import NoteBox from "./NoteBox";
 import AddIcon from "@material-ui/icons/Add";
 import EditIcon from "@material-ui/icons/Edit";
 import img0 from "./../../Req img/bin.jpg";
@@ -10,7 +9,6 @@ import img1 from "./../../Req img/pen.jpg";
 export default function Note() {
   const [show, setShow] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
-  const inputRef = useRef();
 
   const postData = async function (e) {
     setShow(false);
@@ -65,20 +63,8 @@ export default function Note() {
     }
   };
 
-  var oldTitle, oldDes;
   const editData = async function (e) {
-    // console.log(inputRef.current);
-    await setShowEdit(!showEdit);
-    oldTitle =
-      e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
-    oldDes = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
-    document.getElementById("title").value = oldTitle;
-    document.getElementById("des").value = oldDes;
-    console.log(
-      document.getElementById("title").value +
-        "\t" +
-        document.getElementById("des").value
-    );
+    setShowEdit(!showEdit);
   };
   return (
     <div id="NotemTDiv">
@@ -100,7 +86,6 @@ export default function Note() {
               </div>
               <form method="DELETE">
                 <textarea
-                  ref={inputRef}
                   name=""
                   id=""
                   cols="30"
@@ -122,26 +107,23 @@ export default function Note() {
                   onClick={deletaData}
                 />
               </div>
-              {showEdit ? (
-                <div className="editMDiv">
-                  <div>
-                    <form method="PUT">
-                      <input type="text" name="" id="title" />
-                      <textarea name="" id="des" cols="30" rows="10"></textarea>
-                    </form>
-                    <div>
-                      <button
-                        onClick={() => {
-                          setShowEdit(false);
-                        }}
-                      >
-                        Close
-                      </button>
-                      <button> Edit </button>
-                    </div>
-                  </div>
+              {/*  */}
+              {showEdit ? (<div>
+                <div>
+                  <form method="PUT">
+                    <input type="text" name="" id="" value={value.title} />
+                    <textarea
+                      name=""
+                      id=""
+                      cols="30"
+                      rows="10"
+                    >
+                      {value.des}
+                    </textarea>
+                  </form>
                 </div>
-              ) : null}
+                <div></div>
+              </div>) : null}
             </div>
           );
         })}
