@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css";
 import AddIcon from "@material-ui/icons/Add";
@@ -66,6 +66,7 @@ export default function Note() {
   const editData = async function (e) {
     await setShowEdit(!showEdit);
   };
+
   return (
     <div id="NotemTDiv">
       <div className="NoteTDiv">
