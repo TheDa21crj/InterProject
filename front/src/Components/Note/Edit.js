@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css"
 
 export default function Edit(props) {
@@ -6,28 +7,13 @@ export default function Edit(props) {
   console.log("value\t" + props.valNote);
   return (
     <div>
-      {show ? (
-        <div className="editMDiv">
-          <div>
-            <form method="PUT">
-              <input type="text" name="" id="title" value={props.valNote.title} />
-              <textarea name="" id="des" cols="30" rows="10">
-                {props.textNote}
-              </textarea>
-            </form>
-            <div>
-              <button
-                onClick={() => {
-                  props.idM(null);
-                }}
-              >
-                Close
-              </button>
-              <button>Edit</button>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      <div>
+        <form method="PUT">
+          <input type="text" value={props.valNote} />
+          <textarea name="" id="" cols="30" rows="10">{props.valNote}</textarea>
+        </form>
+      </div>
+      <div></div>
     </div>
   );
 }
