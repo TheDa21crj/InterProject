@@ -107,7 +107,6 @@ export default function Note() {
                   onClick={deletaData}
                 />
               </div>
-              {/*  */}
               {showEdit ? (<div>
                 <div>
                   <form method="PUT">
