@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css";
 import AddIcon from "@material-ui/icons/Add";
-import EditIcon from "@material-ui/icons/Edit";
 import img0 from "./../../Req img/bin.jpg";
 import img1 from "./../../Req img/pen.jpg";
+import Edit from "./Edit"
 
 export default function Note() {
   const [show, setShow] = useState(false);
@@ -154,6 +154,7 @@ export default function Note() {
           </div>
         ) : null}
       </div>
+
     </div>
   );
 }

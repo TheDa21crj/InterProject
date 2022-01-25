@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CSS/Note.css"
 
 export default function Edit(props) {
   const [show, setShowEdit] = useState(true);
@@ -28,21 +29,4 @@ export default function Edit(props) {
       ) : null}
     </div>
   );
-}
-
-{
-  /* <div>
-  <div>
-    <form method="PUT">
-      <input type="text" name="" id="title" value={value.title} />
-      <textarea name="" id="des" cols="30" rows="10">
-        value={value.des}
-      </textarea>
-    </form>
-    <div>
-      <button>Close</button>
-      <button> Edit </button>
-    </div>
-  </div>
-</div>; */
 }
