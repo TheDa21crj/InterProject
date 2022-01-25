@@ -65,6 +65,7 @@ export default function Note() {
 
   const editData = async function (e) {
     setShowEdit(!showEdit);
+
   };
   return (
     <div id="NotemTDiv">
