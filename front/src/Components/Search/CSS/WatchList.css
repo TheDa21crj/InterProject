@@ -1,5 +1,5 @@
 .WatchmDiv {
-  width: 380px;
+  width: 400px;
   height: 45vh;
   overflow-y: scroll;
   margin: 5% 0% 2% 3%;
@@ -35,4 +35,11 @@
   padding: 1%;
   box-shadow: 5px 5px 5px rgb(190, 190, 190);
   backdrop-filter: opacity(0);
+}
+
+.inpValue {
+  outline: none;
+  border-style: none;
+  font-size: 1.2rem;
+  width: 100%;
 }

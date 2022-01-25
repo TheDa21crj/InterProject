@@ -111,7 +111,7 @@ export default function Search() {
               <div>
                 <div key={key}>
                   <p id="pTagVal">
-                    <form method="DELETE">
+                    <form method="DELETE" className="formDelete">
                       <input
                         type="text"
                         name=""
