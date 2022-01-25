@@ -69,8 +69,8 @@ export default function Note() {
   return (
     <div id="NotemTDiv">
       <div className="NoteTDiv">
-        <p> Note </p>
-        <div>
+        <p className="NnoteP">Notes</p>
+        <div className="NaddIcon">
           <AddIcon onClick={() => setShow(!show)} className="addIcons" />
         </div>
       </div>
@@ -109,21 +109,22 @@ export default function Note() {
                 />
               </div>
               <div>
-                {
-                  showEdit ? (
-                    <div id="displayEditNone">
+                {showEdit ? (
+                  <div id="displayEditNone">
+                    <div>
                       <div>
-                        <div>
-                          <input type="text" name="" id="" value={value.title} />
-                          <textarea name="" id="" cols="30" rows="10">{value.des}</textarea>
-                        </div>
-                        <div>
-                          <button>Close</button>
-                          <button>Add</button></div>
+                        <input type="text" name="" id="" value={value.title} />
+                        <textarea name="" id="" cols="30" rows="10">
+                          {value.des}
+                        </textarea>
+                      </div>
+                      <div>
+                        <button>Close</button>
+                        <button>Add</button>
                       </div>
                     </div>
-                  ) : null
-                }
+                  </div>
+                ) : null}
               </div>
             </div>
           );
