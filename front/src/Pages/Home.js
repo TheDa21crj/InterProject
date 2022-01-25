@@ -5,6 +5,7 @@ import WatchList from "./../Components/WatchList/WatchList";
 import PieChart from "./../Components/PieChart/PieChart";
 import Note from "./../Components/Note/Note";
 import Rule from "./../Components/Rules/Rule";
+import Table from "./../Components/Table/Table";
 
 export default function Home() {
   return (
@@ -12,14 +13,15 @@ export default function Home() {
       <div>
         <Search />
         <WatchList />
-      </div>{" "}
+      </div>
       <div>
         <PieChart />
-      </div>{" "}
+        <Table />
+      </div>
       <div>
         <Note />
         <Rule />
-      </div>{" "}
+      </div>
     </div>
   );
 }
