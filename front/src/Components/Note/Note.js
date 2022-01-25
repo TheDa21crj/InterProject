@@ -64,15 +64,7 @@ export default function Note() {
   };
 
   const editData = async function (e) {
-    await setShowEdit(!showEdit);
-    const oldTitle = e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
-    const oldDes = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
-    const editDiv = document.getElementById("editDiv").firstChild
-
-    const node = document.createElement("input");
-    node.value = oldTitle;
-    editDiv.appendChild(node);
-
+    setShowEdit(!showEdit);
   };
   return (
     <div id="NotemTDiv">
