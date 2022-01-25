@@ -4,7 +4,7 @@ import "./CSS/Note.css";
 import AddIcon from "@material-ui/icons/Add";
 import img0 from "./../../Req img/bin.jpg";
 import img1 from "./../../Req img/pen.jpg";
-import Edit from "./Edit"
+import Edit from "./Edit";
 
 export default function Note() {
   const [show, setShow] = useState(false);
@@ -110,11 +110,8 @@ export default function Note() {
                   onClick={deletaData}
                 />
               </div>
-              <div>
-              </div>
             </div>
           );
-
         })}
         {show ? (
           <div className="modalMDiv">
@@ -140,9 +137,7 @@ export default function Note() {
           </div>
         ) : null}
       </div>
-      {
-        showID && (<Edit valNote={showID} idM={setShowID} />)
-      }
+      {showID && <Edit valNote={showID} idM={setShowID} />}
     </div>
   );
 }
