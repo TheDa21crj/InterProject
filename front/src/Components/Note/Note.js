@@ -79,15 +79,15 @@ export default function Note() {
           return (
             <div key={key} className="NMapDiv" onClick={getData}>
               <div className="TitleDiv">
-                <form method="DELETE">
-                  <input type="text" name="" id="" value={value.title} />
-                  <input type="text" name="" id="" value={value.date} />
+                <form method="DELETE" className="NfomDelete">
+                  <input type="text" name="" id="title" value={value.title} />
+                  <input type="text" name="" id="date" value={value.date} />
                 </form>
               </div>
               <form method="DELETE">
                 <textarea
                   name=""
-                  id=""
+                  id="des"
                   cols="30"
                   rows="10"
                   value={value.des}
