@@ -64,7 +64,15 @@ export default function Note() {
   };
 
   const editData = async function (e) {
-    setShowEdit(!showEdit);
+    await setShowEdit(!showEdit);
+    const oldTitle = e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
+    const oldDes = e.target.parentNode.parentNode.childNodes[1].firstChild.value;
+    const editDiv = document.getElementById("editDiv").firstChild
+
+    const node = document.createElement("input");
+    node.value = oldTitle;
+    editDiv.appendChild(node);
+
   };
   return (
     <div id="NotemTDiv">
@@ -93,6 +101,7 @@ export default function Note() {
                   value={value.des}
                 ></textarea>
               </form>
+              <p className="idP">{value._id}</p>
               <div className="iconsHover">
                 <img
                   src={img1}
@@ -107,22 +116,6 @@ export default function Note() {
                   onClick={deletaData}
                 />
               </div>
-              {showEdit ? (<div>
-                <div>
-                  <form method="PUT">
-                    <input type="text" name="" id="" value={value.title} />
-                    <textarea
-                      name=""
-                      id=""
-                      cols="30"
-                      rows="10"
-                    >
-                      {value.des}
-                    </textarea>
-                  </form>
-                </div>
-                <div></div>
-              </div>) : null}
             </div>
           );
         })}
