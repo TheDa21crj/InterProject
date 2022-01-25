@@ -42,8 +42,6 @@ export default function Rule() {
     }
   };
 
-  var objData = [];
-
   const getValue = async function (e) {
     if (e.target.checked === true) {
       const rule = e.target.parentNode.childNodes[1].childNodes[0].value;
@@ -87,7 +85,7 @@ export default function Rule() {
   return (
     <div onClick={getData} className="RmDiv">
       <div className="iconsTile">
-        <div>Rules</div>
+        <div className="ruleP">Rules</div>
         <div>
           <img
             src={tickIcon}
@@ -110,10 +108,15 @@ export default function Rule() {
             <div>
               <div key={key}>
                 {check ? (
-                  <div>
+                  <div className="RradioChecked">
                     <input type="checkbox" name="" id="ckeckIt" checked />
-                    <form method="DELETE">
-                      <input type="text" name="" id="" value={value.rule} />
+                    <form method="DELETE" className="RformDelete">
+                      <input
+                        type="text"
+                        name=""
+                        className="rule"
+                        value={value.rule}
+                      />
                     </form>
                   </div>
                 ) : (
@@ -124,8 +127,13 @@ export default function Rule() {
                       id="ckeckIt"
                       onClick={getValue}
                     />
-                    <form method="DELETE">
-                      <input type="text" name="" id="" value={value.rule} />
+                    <form method="DELETE" className="RformDelete">
+                      <input
+                        type="text"
+                        name=""
+                        className="rule"
+                        value={value.rule}
+                      />
                     </form>
                   </div>
                 )}

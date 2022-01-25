@@ -16,17 +16,25 @@
 }
 
 #RdeleteIcon {
-  width: 50px;
+  width: 70px;
   height: 40px;
+  margin-left: -10px;
 }
 
 .iconsTile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border-style: solid;
   border-width: 0px 0px 1px 0px;
   border-color: grey;
+}
+
+.ruleP {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 .AddmDiv {
@@ -97,4 +105,24 @@
   border-style: none;
   background-color: blue;
   color: white;
+}
+
+.RradioChecked,
+#RradioUnChecked {
+  margin-top: 20px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rule {
+  display: flex;
+  outline: none;
+  border-style: none;
+  font-size: 1.2rem;
+}
+
+.RformDelete {
+  margin-left: 20px;
 }

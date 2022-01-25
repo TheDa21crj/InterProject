@@ -9,11 +9,10 @@
       #f368e0 0,
       #f368e0 75%,
       #0abde3 0,
-      #0abde3 89%,
-      #10ac84 0,
-      #10ac84 100%
+      #0abde3 100%
     );
   min-width: 300px;
+  min-height: 200px;
   margin-top: -8%;
 }
 
@@ -56,4 +55,11 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 5%;
+}
+
+.chatKey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
