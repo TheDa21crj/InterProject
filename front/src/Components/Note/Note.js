@@ -13,11 +13,19 @@ export default function Note() {
   const [showTitle, setTitle] = useState();
   const [showDes, setDes] = useState();
 
+  const setChangeT = async function (e) {
+    setTitle(e.target.value);
+  };
+
+  const setChangeD = async function (e) {
+    setDes(e.target.value);
+  };
+
   const postData = async function (e) {
     setShow(false);
 
-    const title = document.getElementById("inpTag").value;
-    const des = document.getElementById("TextTag").value;
+    const title = showTitle;
+    const des = showDes;
     try {
       await fetch("http://localhost:5000");
       const r = await fetch("/api/notemaker", {
@@ -47,7 +55,13 @@ export default function Note() {
     const data = await response.json();
   };
 
+  // const getTitle = async function (e) {
+  //   setTitle(e);
+  //   console.log(e);
+  // };
+
   const deletaData = async function (e) {
+    // console.log(showTitle);
     const title =
       e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
     try {
@@ -111,7 +125,10 @@ export default function Note() {
                   src={img0}
                   alt=""
                   className="deleteImg"
-                  onClick={deletaData}
+                  onClick={() => {
+                    // getTitle(value.title);
+                    deletaData();
+                  }}
                 />
               </div>
             </div>
@@ -121,8 +138,14 @@ export default function Note() {
           <div className="modalMDiv">
             <div className="popDiv">
               <form className="form">
-                <input type="text" name="" id="inpTag" />
-                <textarea name="" cols="30" rows="10" id="TextTag"></textarea>
+                <input type="text" name="" id="inpTag" onChange={setChangeT} />
+                <textarea
+                  name=""
+                  cols="30"
+                  rows="10"
+                  id="TextTag"
+                  onChange={setChangeD}
+                ></textarea>
               </form>
               <div className="DivBtn">
                 <button id="BtnClose" onClick={() => setShow(false)}>
