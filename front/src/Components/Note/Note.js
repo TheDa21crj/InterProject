@@ -8,7 +8,6 @@ import Edit from "./Edit";
 
 export default function Note() {
   const [show, setShow] = useState(false);
-  const [showEdit, setShowEdit] = useState(false);
   const [showID, setShowID] = useState();
   const [showD, setShowD] = useState();
 
