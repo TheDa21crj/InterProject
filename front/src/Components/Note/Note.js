@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import JSONDATA from "./../../Data/NoteList.json";
 import "./CSS/Note.css";
 import AddIcon from "@material-ui/icons/Add";
