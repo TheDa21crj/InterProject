@@ -12,6 +12,7 @@ export default function Note() {
   const [showD, setShowD] = useState();
   const [showTitle, setTitle] = useState();
   const [showDes, setDes] = useState();
+  const [showTDelete, setDesTDelete] = useState();
 
   const setChangeT = async function (e) {
     setTitle(e.target.value);
@@ -55,30 +56,30 @@ export default function Note() {
     const data = await response.json();
   };
 
-  // const getTitle = async function (e) {
-  //   setTitle(e);
-  //   console.log(e);
-  // };
+  const getTitle = async function (t) {
+    setDesTDelete(t);
+    console.log("From getTitle = " + t);
+  };
 
   const deletaData = async function (e) {
-    // console.log(showTitle);
-    const title =
-      e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
-    try {
-      await fetch("http://localhost:5000");
-      const r = await fetch("/api/notemaker/delete", {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title,
-        }),
-      });
-      getData(e);
-    } catch (error) {
-      console.log(error);
-    }
+    console.log("From deleteData = " + showTDelete);
+    // const title =
+    //   e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
+    // try {
+    //   await fetch("http://localhost:5000");
+    //   const r = await fetch("/api/notemaker/delete", {
+    //     method: "DELETE",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({
+    //       title,
+    //     }),
+    //   });
+    //   getData(e);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   const editData = async function (t, d) {
@@ -126,7 +127,7 @@ export default function Note() {
                   alt=""
                   className="deleteImg"
                   onClick={() => {
-                    // getTitle(value.title);
+                    getTitle(value.title);
                     deletaData();
                   }}
                 />
