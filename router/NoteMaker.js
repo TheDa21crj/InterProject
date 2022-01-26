@@ -54,20 +54,6 @@ router.delete(
   }
 );
 
-router.get("/find", [check("_id", "id is required")], async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-  const { _id } = req.body;
-  const data = await Connect.findOne({ _id: _id });
-  fs.writeFile("./front/src/Data/Data.json", JSON.stringify(data), (err) => {
-    console.log("done");
-    console.log(err);
-  });
-  res.json({ message: data });
-});
-
 router.put(
   "/update",
   [check("title", "title is required")],
