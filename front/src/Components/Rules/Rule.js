@@ -9,6 +9,7 @@ export default function Rule() {
   const [show, setShow] = useState(false);
   const [check, setCheck] = useState(false);
   const [showRule, setRule] = useState();
+  const [showDelete, setDelete] = useState();
 
   const getData = async function (e) {
     const response = await fetch("http://localhost:5000/api/rules/show");
@@ -49,7 +50,7 @@ export default function Rule() {
 
   const getValue = async function (e) {
     if (e.target.checked === true) {
-      const rule = e.target.parentNode.childNodes[1].childNodes[0].value;
+      const rule = showDelete;
       try {
         await fetch("http://localhost:5000");
         const r = await fetch("/api/rules/delete/one", {
@@ -114,7 +115,13 @@ export default function Rule() {
               <div key={key}>
                 {check ? (
                   <div className="RradioChecked">
-                    <input type="checkbox" name="" id="ckeckIt" checked />
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="ckeckIt"
+                      checked
+                      onChange={() => setDelete(value.rule)}
+                    />
                     <form method="DELETE" className="RformDelete">
                       <input
                         type="text"
@@ -130,6 +137,7 @@ export default function Rule() {
                       type="checkbox"
                       name=""
                       id="ckeckIt"
+                      onChange={() => setDelete(value.rule)}
                       onClick={getValue}
                     />
                     <form method="DELETE" className="RformDelete">
