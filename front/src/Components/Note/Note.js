@@ -10,9 +10,12 @@ export default function Note() {
   const [show, setShow] = useState(false);
   const [showID, setShowID] = useState();
   const [showD, setShowD] = useState();
+  const [showTitle, setTitle] = useState();
+  const [showDes, setDes] = useState();
 
   const postData = async function (e) {
     setShow(false);
+
     const title = document.getElementById("inpTag").value;
     const des = document.getElementById("TextTag").value;
     try {
@@ -45,6 +48,7 @@ export default function Note() {
   };
 
   const deletaData = async function (e) {
+    // console.log(showTitle);
     const title =
       e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
     try {
