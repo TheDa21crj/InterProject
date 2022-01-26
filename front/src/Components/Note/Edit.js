@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./CSS/Edit.css"
+import "./CSS/Edit.css";
 
 export default function Edit(props) {
   const [showDes, setDes] = useState(props.valD);
@@ -7,7 +7,7 @@ export default function Edit(props) {
   const setData = async function (e) {
     setDes(e.target.value);
     console.log(e.target.value);
-  }
+  };
 
   const postData = async function (e) {
     props.idM(null);
@@ -26,6 +26,7 @@ export default function Edit(props) {
         }),
       });
       const data = await r.json();
+      getData(e);
       if (!data.status) {
         console.log("Data Poster");
       } else {
@@ -46,7 +47,9 @@ export default function Edit(props) {
       <div className="EeditDiv">
         <form method="PUT" className="EditformDiv">
           <input type="text" name="" id="valNote" value={props.valNote} />
-          <textarea type="text" name="" id="showDes" onChange={setData}>{showDes}</textarea>
+          <textarea type="text" name="" id="showDes" onChange={setData}>
+            {showDes}
+          </textarea>
         </form>
       </div>
       <div className="EditbtnDiv">
@@ -55,8 +58,12 @@ export default function Edit(props) {
           onClick={() => {
             props.idM(null);
           }}
-        >Close</button>
-        <button onClick={postData} id="editAddBtn">Add</button>
+        >
+          Close
+        </button>
+        <button onClick={postData} id="editAddBtn">
+          Add
+        </button>
       </div>
     </div>
   );
