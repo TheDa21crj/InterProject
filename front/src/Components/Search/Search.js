@@ -13,13 +13,15 @@ import img0 from "./../../Req img/bin.jpg";
 
 export default function Search() {
   const [search, setSearch] = useState("");
+  const [showdata, setData] = useState();
+  const [showDelete, setDelete] = useState();
 
   const filterData = async function (e) {
     setSearch(e.target.value);
   };
 
   const postData = async function (e) {
-    let name = e.target.value;
+    let name = showdata;
     try {
       await fetch("http://localhost:5000");
       const r = await fetch("/api/watchlist", {
@@ -49,8 +51,8 @@ export default function Search() {
   };
 
   const deletaData = async function (e) {
-    console.log(e.target.parentNode.parentNode.firstChild.firstChild.value);
-    const name = e.target.parentNode.parentNode.firstChild.firstChild.value;
+    console.log(showDelete);
+    const name = showDelete;
     try {
       await fetch("http://localhost:5000");
       const r = await fetch("/api/watchlist", {
@@ -93,11 +95,15 @@ export default function Search() {
                   id="inpValue"
                   className={SrCss.formImp}
                   value={value.name}
-                  onClick={postData}
+                  // onClick={postData}
                 />
                 <div className={SrCss.hoverIcons}>
-                  <CheckIcon />
-                  <AddIcon />
+                  <CheckIcon
+                    onClick={() => {
+                      postData();
+                    }}
+                  />
+                  <AddIcon onClick={() => setData(value.name)} />
                 </div>
               </form>
             </div>
@@ -126,9 +132,9 @@ export default function Search() {
                         src={img0}
                         alt=""
                         className="deleteImg"
-                        onClick={deletaData}
+                        onClick={() => deletaData()}
                       />
-                      <CheckIcon />
+                      <CheckIcon onClick={() => setDelete(value.name)} />
                       <MoreHorizIcon />
                     </div>
                   </p>
