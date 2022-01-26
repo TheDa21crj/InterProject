@@ -10,6 +10,7 @@ export default function Note() {
   const [show, setShow] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
   const [showID, setShowID] = useState();
+  const [showD, setShowD] = useState();
 
   const postData = async function (e) {
     setShow(false);
@@ -64,9 +65,10 @@ export default function Note() {
     }
   };
 
-  const editData = async function (e) {
-    setShowID(e);
-    console.log(e);
+  const editData = async function (t, d) {
+    setShowID(t);
+    setShowD(d);
+    console.log(t, d);
   };
 
   return (
@@ -101,7 +103,7 @@ export default function Note() {
                   src={img1}
                   alt=""
                   className="iconEdit"
-                  onClick={() => editData(value._id)}
+                  onClick={() => editData(value.title, value.des)}
                 />
                 <img
                   src={img0}
@@ -137,7 +139,7 @@ export default function Note() {
           </div>
         ) : null}
       </div>
-      {showID && <Edit valNote={showID} idM={setShowID} />}
+      {showID && <Edit valNote={showID} valD={showD} idM={setShowID} />}
     </div>
   );
 }

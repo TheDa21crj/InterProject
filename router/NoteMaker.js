@@ -65,7 +65,7 @@ router.get("/find", [check("_id", "id is required")], async (req, res) => {
     console.log("done");
     console.log(err);
   });
-  res.send({ data });
+  res.json({ message: data });
 });
 
 router.put(
