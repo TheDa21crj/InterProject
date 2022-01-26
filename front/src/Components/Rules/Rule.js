@@ -8,15 +8,20 @@ import deleteIcon from "./../../Req img/bin.jpg";
 export default function Rule() {
   const [show, setShow] = useState(false);
   const [check, setCheck] = useState(false);
+  const [showRule, setRule] = useState();
 
   const getData = async function (e) {
     const response = await fetch("http://localhost:5000/api/rules/show");
     const data = await response.json();
   };
 
+  const textAdd = async function (e) {
+    setRule(e.target.value);
+  };
+
   const postData = async function (e) {
     setShow(false);
-    const rule = document.getElementById("textAdd").value;
+    const rule = showRule;
     console.log(rule);
     try {
       await fetch("http://localhost:5000");
@@ -147,7 +152,13 @@ export default function Rule() {
           <div className="AddDiv">
             <form method="POST" className="AddmForm">
               <input type="text" name="" value="Rules" id="AddValue" />
-              <textarea name="" id="textAdd" cols="30" rows="10"></textarea>
+              <textarea
+                name=""
+                id="textAdd"
+                cols="30"
+                rows="10"
+                onChange={textAdd}
+              ></textarea>
             </form>
             <div className="AddBtnDiv">
               <button id="RbtnClose" onClick={() => setShow(false)}>
