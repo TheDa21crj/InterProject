@@ -48,7 +48,6 @@ export default function Note() {
   };
 
   const deletaData = async function (e) {
-    // console.log(showTitle);
     const title =
       e.target.parentNode.parentNode.firstChild.firstChild.firstChild.value;
     try {
