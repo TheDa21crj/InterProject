@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
 
 export default function CTable(props) {
-  const [price1, setprice1] = useState(100);
-  const [price2, setprice2] = useState(80);
-  const [price3, setprice3] = useState(100);
+  const [price1, setprice1] = useState(0);
+  const [price2, setprice2] = useState(0);
+  const [price3, setprice3] = useState(0);
   const [total, setTotal] = useState(54000);
+
+  const [th1, setth1] = useState();
+
   useEffect(() => {
     setInterval(() => {
       setprice1(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
       setprice2(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
       setprice3(Math.floor(Math.random() * (120 - 20 + 1)) + 20);
-      setTotal(
-        price1 * Number(props.quantity1) +
-          price2 * Number(props.quantity2) +
-          price3 * Number(props.quantity3)
-      );
+      // setTotal(
+      //   price1 * Number(props.quantity1) +
+      //     price2 * Number(props.quantity2) +
+      //     price3 * Number(props.quantity3)
+      // );
     }, 1000);
   }, []);
 
