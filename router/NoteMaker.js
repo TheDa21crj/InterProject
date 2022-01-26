@@ -61,6 +61,10 @@ router.get("/find", [check("_id", "id is required")], async (req, res) => {
   }
   const { _id } = req.body;
   const data = await Connect.findOne({ _id: _id });
+  fs.writeFile("./front/src/Data/Data.json", JSON.stringify(data), (err) => {
+    console.log("done");
+    console.log(err);
+  });
   res.send({ data });
 });
 
