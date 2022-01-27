@@ -51,7 +51,6 @@ export default function Search() {
   };
 
   const deletaData = async function (e) {
-    console.log(showDelete);
     const name = showDelete;
     try {
       await fetch("http://localhost:5000");
