@@ -68,16 +68,20 @@ router.put(
       return res.status(400).json({ errors: errors.array() });
     }
     const { title, des } = req.body;
-    const data = await Connect.findOne({ title: title });
-    const result = await Connect.updateOne(
-      { _id: data._id },
-      {
-        $set: {
-          des: des,
-        },
-      }
-    );
-    res.send(result);
+    try {
+      const data = await Connect.findOne({ title: title });
+      const result = await Connect.updateOne(
+        { _id: data._id },
+        {
+          $set: {
+            des: des,
+          },
+        }
+      );
+      res.send(result);
+    } catch (error) {
+      console.log(error);
+    }
   }
 );
 
