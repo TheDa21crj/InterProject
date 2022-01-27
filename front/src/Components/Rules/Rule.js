@@ -23,7 +23,6 @@ export default function Rule() {
   const postData = async function (e) {
     setShow(false);
     const rule = showRule;
-    console.log(rule);
     try {
       await fetch("http://localhost:5000");
       const r = await fetch("/api/rules", {

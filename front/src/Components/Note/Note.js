@@ -86,7 +86,6 @@ export default function Note() {
   const editData = async function (t, d) {
     setShowID(t);
     setShowD(d);
-    console.log(t, d);
   };
 
   return (

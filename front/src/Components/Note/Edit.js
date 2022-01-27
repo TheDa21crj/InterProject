@@ -6,7 +6,6 @@ export default function Edit(props) {
 
   const setData = async function (e) {
     setDes(e.target.value);
-    console.log(e.target.value);
   };
 
   const postData = async function (e) {
