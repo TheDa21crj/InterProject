@@ -18,5 +18,13 @@
     {
         "id":"5",
         "name":"gmail contact"
+    },
+    {
+        "id":"6",
+        "name":"gmail map"
+    },
+    {
+        "id":"7",
+        "name":"gmail files"
     }
 ]
