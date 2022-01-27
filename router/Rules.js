@@ -37,8 +37,12 @@ router.get("/show", async (req, res) => {
 });
 
 router.delete("/delete", async (req, res) => {
-  const dataDelete = await Connect.deleteMany({});
-  res.send({ dataDelete });
+  try {
+    const dataDelete = await Connect.deleteMany({});
+    res.send({ dataDelete });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 router.delete(
@@ -50,13 +54,13 @@ router.delete(
       return res.status(400).json({ errors: errors.array() });
     }
     const { rule } = req.body;
-    const data = await Connect.findOne({ rule: rule });
-    if (data) {
+    try {
+      const data = await Connect.findOne({ rule: rule });
       const dataDelete = await Connect.deleteOne({ _id: data._id });
-    } else {
-      return res.send({ message: "Data does not exists" });
+      res.send({ dataDelete });
+    } catch (error) {
+      console.log(error);
     }
-    res.send({ dataDelete });
   }
 );
 
