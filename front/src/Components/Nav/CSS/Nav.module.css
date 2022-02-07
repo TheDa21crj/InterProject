@@ -8,6 +8,10 @@
     box-shadow: 5px 5px 5px rgb(231, 231, 231);
 }
 
+.mH1 {
+    transition: all 0.3s;
+}
+
 #ArrowBackIosIcon,
 #ArrowForwardIosIcon {
     opacity: 0;
@@ -36,4 +40,20 @@
     visibility: visible;
     margin-right: 0px;
     margin-left: 0px;
+}
+
+.mcontent:hover>.mH1 {
+    animation: bounce 0.4s linear;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-20%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
