@@ -1,8 +1,4 @@
 .NmDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     width: 98%;
     background-color: gold;
     padding: 1%;
@@ -14,7 +10,30 @@
 
 #ArrowBackIosIcon,
 #ArrowForwardIosIcon {
-    background: -webkit-linear-gradient(180deg, gold, white 80%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: gold;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+#ArrowBackIosIcon {
+    margin-right: -50px;
+}
+
+#ArrowForwardIosIcon {
+    margin-left: -50px;
+}
+
+.mcontent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mcontent:hover>#ArrowBackIosIcon,
+.mcontent:hover>#ArrowForwardIosIcon {
+    opacity: 1;
+    visibility: visible;
+    margin-right: 0px;
+    margin-left: 0px;
 }
