@@ -1,0 +1,13 @@
+.NmDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: gold;
+    padding: 1%;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 5px rgb(231, 231, 231);
+}
