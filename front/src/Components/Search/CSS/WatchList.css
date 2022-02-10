@@ -3,9 +3,15 @@
     height: 45vh;
     overflow-y: scroll;
     margin: 5% 0% 2% 3%;
+    padding: 5px;
+    border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: grey;
+}
+
+.WatchmDiv::-webkit-scrollbar {
+    display: none;
 }
 
 #pTagVal {
