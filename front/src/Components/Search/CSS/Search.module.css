@@ -10,6 +10,10 @@
     border-radius: 5px;
 }
 
+.sMdiv::-webkit-scrollbar {
+    display: none;
+}
+
 #searchInp,
 .formImp {
     outline: none;
