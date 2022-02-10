@@ -25,6 +25,11 @@
     background: linear-gradient( 90deg, rgba(255, 204, 0, 0.2) 0%, rgba(212, 175, 55, 0.2) 30.52%, rgba(184, 134, 11, 0.2) 60.42%, rgba(153, 101, 21, 0.2) 100%);
 }
 
+#pTagVal:hover>.WiconsDiv {
+    opacity: 1;
+    visibility: visible;
+}
+
 .WiconsDiv {
     opacity: 0;
     visibility: hidden;
@@ -40,11 +45,6 @@
     box-shadow: 5px 5px 5px rgb(190, 190, 190);
     backdrop-filter: opacity(0);
     transition: all 0.3s;
-}
-
-#pTagVal:hover>.WiconsDiv {
-    opacity: 1;
-    visibility: visible;
 }
 
 .inpValue {
