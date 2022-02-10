@@ -11,7 +11,7 @@
 }
 
 .PieChartmDiv:hover {
-    transform: scale(1.5);
+    transform: scale(1.5) translateY(10%);
 }
 
 #item1,
