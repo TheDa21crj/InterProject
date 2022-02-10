@@ -63,9 +63,11 @@
     border-width: 1px;
     border-color: grey;
     transition: all 0.5s;
+    margin-bottom: 10px;
 }
 
 .formImp:hover {
+    border-radius: 5px 0px;
     border-color: gold;
     color: white;
     box-shadow: inset -10.5em 0 0 0 rgb(255, 228, 77), inset 10.5em 0 0 0 rgb(255, 228, 77);
