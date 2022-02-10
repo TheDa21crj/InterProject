@@ -78,36 +78,39 @@ export default function Search() {
           placeholder="Search"
           onChange={filterData}
         />
-        {JSONDATAS.filter((value) => {
-          if (search === "") {
-            return value;
-          } else if (value.name.toLowerCase().includes(search.toLowerCase())) {
-            return value;
-          }
-        }).map((value, key) => {
-          return (
-            <div key={key}>
-              <form method="POST" className={SrCss.form}>
-                <input
-                  type="text"
-                  name=""
-                  id="inpValue"
-                  className={SrCss.formImp}
-                  value={value.name}
-                  // onClick={postData}
-                />
-                <div className={SrCss.hoverIcons}>
-                  <CheckIcon
-                    onClick={() => {
-                      postData();
-                    }}
+        <div>
+          {JSONDATAS.filter((value) => {
+            if (search === "") {
+              return value;
+            } else if (
+              value.name.toLowerCase().includes(search.toLowerCase())
+            ) {
+              return value;
+            }
+          }).map((value, key) => {
+            return (
+              <div key={key}>
+                <form method="POST" className={SrCss.form}>
+                  <input
+                    type="text"
+                    name=""
+                    id="inpValue"
+                    className={SrCss.formImp}
+                    value={value.name}
                   />
-                  <AddIcon onClick={() => setData(value.name)} />
-                </div>
-              </form>
-            </div>
-          );
-        })}
+                  <div className={SrCss.hoverIcons}>
+                    <CheckIcon
+                      onClick={() => {
+                        postData();
+                      }}
+                    />
+                    <AddIcon onClick={() => setData(value.name)} />
+                  </div>
+                </form>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <div onClick={getData} className="WatchmDiv">
         <div>
