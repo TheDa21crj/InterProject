@@ -25,6 +25,7 @@
 }
 
 #pTagVal:hover {
+    border-color: white;
     box-shadow: inset -10.5em 0 0 0 rgb(255, 228, 77), inset 10.5em 0 0 0 white;
     transition: all 0.3s;
 }
@@ -52,6 +53,7 @@
 }
 
 .inpValue {
+    text-transform: capitalize;
     background-color: transparent;
     outline: none;
     border-style: none;
