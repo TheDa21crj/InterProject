@@ -14,8 +14,7 @@
 .PieChartmDiv:hover {
     width: 100%;
     padding: 3%;
-    /* background-image: linear-gradient(112deg, #fd842d, #fd842d, #dad3b3, #febb4b); */
-    background: radial-gradient(ellipse at top, #fd842d, #febb4b), radial-gradient(ellipse at bottom, #fd842d, #dad3b3);
+    background: radial-gradient(ellipse at top, #ff954a, #febb4b), radial-gradient(ellipse at bottom, #f0914e, #dad3b3);
     border-radius: 10px;
     transform: scale(1.5) translateY(20%);
     transition: all 0.3s;
