@@ -24,6 +24,13 @@
     border-radius: 10px;
     border-width: 1px;
     margin-bottom: 5px;
+    transition: all 0.3s;
+}
+
+#searchInp:hover {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gold;
 }
 
 #searchInp,
@@ -51,7 +58,9 @@
 
 .formImp:hover {
     border-color: gold;
+    color: white;
     box-shadow: inset -10.5em 0 0 0 rgb(255, 228, 77), inset 10.5em 0 0 0 rgb(255, 228, 77);
+    transition: all 0.3s;
 }
 
 .form:hover>.hoverIcons {
