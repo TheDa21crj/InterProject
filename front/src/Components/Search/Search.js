@@ -78,7 +78,7 @@ export default function Search() {
           placeholder="Search"
           onChange={filterData}
         />
-        <div>
+        <div className={SrCss.scrollDiv}>
           {JSONDATAS.filter((value) => {
             if (search === "") {
               return value;

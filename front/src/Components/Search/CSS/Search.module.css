@@ -1,17 +1,23 @@
 .sMdiv {
     width: 400px;
     height: 45vh;
-    overflow-y: scroll;
+    overflow-y: hidden;
     margin: 5% 0% 2% 3%;
     border-style: solid;
     border-width: 1px;
     border-color: grey;
     padding: 5px;
     border-radius: 5px;
+    z-index: 1;
 }
 
-.sMdiv::-webkit-scrollbar {
+.sMdiv::-webkit-scrollbar,
+.scrollDiv::-webkit-scrollbar {
     display: none;
+}
+
+.scrollDiv {
+    overflow-y: scroll;
 }
 
 #searchInp {
