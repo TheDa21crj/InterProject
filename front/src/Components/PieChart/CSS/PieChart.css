@@ -1,9 +1,17 @@
+/* .PieChartmDiv {
+    background-color: red;
+} */
+
 .pie-chart {
     background: radial-gradient(circle closest-side, transparent 60%, white 0), conic-gradient( from 180deg, #ee5253 0, #ee5253 35%, #ff9f43 0, #ff9f43 60%, #f368e0 0, #f368e0 75%, #0abde3 0, #0abde3 100%);
     min-width: 300px;
     min-height: 200px;
     margin-top: -8%;
     z-index: -1;
+}
+
+.PieChartmDiv:hover {
+    transform: scale(1.5);
 }
 
 #item1,

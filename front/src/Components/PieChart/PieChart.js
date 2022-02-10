@@ -1,12 +1,11 @@
 import React from "react";
+import Chart from "./Chart";
 import "./CSS/PieChart.css";
 
 export default function PieChart() {
   return (
     <div className="PieChartmDiv">
-      <div className="pie-chart">
-        <div className="centerWhite"></div>
-      </div>
+      <Chart />
       <div className="chatKey">
         <p>
           <span id="item1"></span>Item 1 - 35%
