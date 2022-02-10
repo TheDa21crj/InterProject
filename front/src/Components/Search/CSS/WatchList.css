@@ -1,45 +1,46 @@
 .WatchmDiv {
-  width: 400px;
-  height: 45vh;
-  overflow-y: scroll;
-  margin: 5% 0% 2% 3%;
-  border-style: solid;
-  border-width: 1px;
-  border-color: grey;
+    width: 400px;
+    height: 45vh;
+    overflow-y: scroll;
+    margin: 5% 0% 2% 3%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
 }
 
 #pTagVal {
-  font-size: 1.5rem;
-  border-style: solid;
-  border-width: 1px;
-  border-color: grey;
-  padding: 2%;
-}
-
-#pTagVal:hover > .WiconsDiv {
-  opacity: 1;
-  visibility: visible;
+    font-size: 1.5rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    padding: 2%;
 }
 
 .WiconsDiv {
-  opacity: 0;
-  visibility: hidden;
-  background-color: white;
-  width: 40%;
-  margin-top: -30px;
-  margin-left: 200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  border-radius: 10px;
-  padding: 1%;
-  box-shadow: 5px 5px 5px rgb(190, 190, 190);
-  backdrop-filter: opacity(0);
+    opacity: 0;
+    visibility: hidden;
+    background-color: white;
+    width: 40%;
+    margin-top: -30px;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 1%;
+    box-shadow: 5px 5px 5px rgb(190, 190, 190);
+    backdrop-filter: opacity(0);
+    transition: all 0.3s;
+}
+
+#pTagVal:hover>.WiconsDiv {
+    opacity: 1;
+    visibility: visible;
 }
 
 .inpValue {
-  outline: none;
-  border-style: none;
-  font-size: 1.2rem;
-  width: 100%;
+    outline: none;
+    border-style: none;
+    font-size: 1.2rem;
+    width: 100%;
 }
