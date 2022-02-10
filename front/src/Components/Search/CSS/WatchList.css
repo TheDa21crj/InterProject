@@ -21,6 +21,8 @@
     border-width: 1px;
     border-color: grey;
     padding: 2%;
+    margin-bottom: 2px;
+    background: linear-gradient( 90deg, rgba(255, 204, 0, 0.2) 0%, rgba(212, 175, 55, 0.2) 30.52%, rgba(184, 134, 11, 0.2) 60.42%, rgba(153, 101, 21, 0.2) 100%);
 }
 
 .WiconsDiv {
@@ -46,6 +48,7 @@
 }
 
 .inpValue {
+    background-color: transparent;
     outline: none;
     border-style: none;
     font-size: 1.2rem;
