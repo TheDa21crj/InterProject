@@ -15,7 +15,7 @@ export default function Home() {
         <div>
           <Search />
         </div>
-        <div>
+        <div className={HoCss.Tablemdiv}>
           <PieChart />
           <Table />
         </div>
