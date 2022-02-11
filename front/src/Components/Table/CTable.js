@@ -27,7 +27,7 @@ export default function CTable(props) {
   return (
     <div className="CTmDiv">
       <p id="tablename">{props.TableName}</p>
-      <table border="1" className="table">
+      <table className="table">
         <tr>
           <th className="topRow">
             <input type="checkbox" value="" />
