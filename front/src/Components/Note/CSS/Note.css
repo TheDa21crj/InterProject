@@ -93,7 +93,12 @@
 }
 
 .addIcons {
+    color: aliceblue;
     cursor: pointer;
+}
+
+.addIcons svg {
+    color: aliceblue;
 }
 
 .DivBtn {
