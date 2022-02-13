@@ -25,6 +25,10 @@
     border-style: solid;
     border-width: 0px 0px 1px 0px;
     border-color: grey;
+    background-image: url("./../../../Req img/book.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .NMapDiv {
@@ -164,6 +168,8 @@
 }
 
 .NnoteP {
+    color: gold;
+    text-shadow: 2px 2px 5px rgb(85, 85, 85);
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 10px;
