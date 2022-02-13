@@ -5,10 +5,11 @@
     border-style: solid;
     border-width: 1px;
     border-color: grey;
+    z-index: 0;
 }
 
 .Nnote {
-    height: 37vh;
+    height: 36vh;
     overflow-y: scroll;
 }
 
@@ -62,6 +63,7 @@
     padding: 3% 7%;
     border-radius: 10px;
     box-shadow: 5px 5px 20px grey;
+    z-index: 5;
 }
 
 .form {
