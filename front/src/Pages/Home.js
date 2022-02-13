@@ -14,16 +14,16 @@ export default function Home() {
       <div className={HoCss.Hmdiv}>
         <div>
           <Search />
-        </div>
+        </div>{" "}
         <div className={HoCss.Tablemdiv}>
           <PieChart />
           <Table />
-        </div>
+        </div>{" "}
         <div>
           <Note />
           <Rule />
-        </div>
-      </div>
+        </div>{" "}
+      </div>{" "}
     </div>
   );
 }
