@@ -16,17 +16,6 @@
     overflow-y: scroll;
 }
 
-
-/* .NnoteChild1 {
-    height: 20vh;
-    background-color: red;
-}
-
-.NnoteChild2 {
-    height: 20vh;
-    background-color: yellow;
-} */
-
 .NoteTDiv {
     display: flex;
     flex-direction: row;
