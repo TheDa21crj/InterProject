@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
 .PieChartmDiv {
     transition: all 0.3s;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .pie-chart {
@@ -10,7 +10,7 @@
     min-width: 300px;
     min-height: 200px;
     border-radius: 10px;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .PieChartmDiv:hover {
