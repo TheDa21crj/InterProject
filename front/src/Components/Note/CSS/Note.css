@@ -22,9 +22,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: grey;
+    border-radius: 5px 5px 0px 0px;
     background-image: url("./../../../Req img/book.jpg");
     background-position: center;
     background-repeat: no-repeat;
