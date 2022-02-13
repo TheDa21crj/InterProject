@@ -8,16 +8,16 @@ export default function PieChart() {
       <Chart />
       <div className="chatKey">
         <p>
-          <span id="item1"></span>Item 1 - 35%
+          <span id="item1"> </span>Item 1 - 35%
         </p>
         <p>
-          <span id="item2"></span>Item 2 - 25%
+          <span id="item2"> </span>Item 2 - 25%
         </p>
         <p>
-          <span id="item3"></span>Item 3 - 15%
+          <span id="item3"> </span>Item 3 - 15%
         </p>
         <p>
-          <span id="item4"></span>Item 4 - 25%
+          <span id="item4"> </span>Item 4 - 25%
         </p>
       </div>
     </div>
