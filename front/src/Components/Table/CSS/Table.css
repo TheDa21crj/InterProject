@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 #TmDiv {
     margin-top: 20px;
-    /* margin-left: 7%; */
     width: 420px;
 }
 
@@ -49,6 +48,5 @@ th {
 }
 
 tr:hover {
-    /* background-color: rgb(243, 230, 156); */
     background-color: rgb(255, 236, 125);
 }

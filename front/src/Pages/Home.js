@@ -13,18 +13,6 @@ export default function Home() {
       <div className={HoCss.topConDiv}>
         <Nav />
         <div className={HoCss.Hmdiv}>
-          {/* <div>
-            <Search />
-          </div>
-          <div className={HoCss.Tablemdiv}>
-            <PieChart />
-            <Table />
-          </div>
-          <div>
-            <Note />
-            <Rule />
-          </div> */}
-
           <div className={HoCss.test}>
             <Search />
           </div>
