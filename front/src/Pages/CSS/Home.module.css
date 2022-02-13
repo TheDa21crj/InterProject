@@ -4,3 +4,8 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+.topConDiv {
+    height: 118vh;
+    background-color: red;
+}

@@ -10,18 +10,20 @@ import Nav from "./../Components/Nav/Nav";
 export default function Home() {
   return (
     <div>
-      <Nav />
-      <div className={HoCss.Hmdiv}>
-        <div>
-          <Search />
-        </div>
-        <div className={HoCss.Tablemdiv}>
-          <PieChart />
-          <Table />
-        </div>
-        <div>
-          <Note />
-          <Rule />
+      <div className={HoCss.topConDiv}>
+        <Nav />
+        <div className={HoCss.Hmdiv}>
+          <div>
+            <Search />
+          </div>
+          <div className={HoCss.Tablemdiv}>
+            <PieChart />
+            <Table />
+          </div>
+          <div>
+            <Note />
+            <Rule />
+          </div>
         </div>
       </div>
     </div>
