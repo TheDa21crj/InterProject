@@ -7,10 +7,6 @@
     border-color: grey;
 }
 
-#NotemTDiv::-webkit-scrollbar {
-    display: none;
-}
-
 .Nnote {
     height: 37vh;
     overflow-y: scroll;
