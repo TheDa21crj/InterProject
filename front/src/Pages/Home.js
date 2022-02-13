@@ -13,7 +13,7 @@ export default function Home() {
       <div className={HoCss.topConDiv}>
         <Nav />
         <div className={HoCss.Hmdiv}>
-          <div>
+          {/* <div>
             <Search />
           </div>
           <div className={HoCss.Tablemdiv}>
@@ -23,7 +23,13 @@ export default function Home() {
           <div>
             <Note />
             <Rule />
+          </div> */}
+
+          <div className={HoCss.test}>
+            <Search />
           </div>
+          <div className={HoCss.test}>2</div>
+          <div className={HoCss.test}>3</div>
         </div>
       </div>
     </div>

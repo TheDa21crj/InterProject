@@ -5,7 +5,12 @@
     justify-content: space-evenly;
 }
 
-.topConDiv {
-    height: 118vh;
+.Tablemdiv {
     background-color: red;
+    width: 420px;
+}
+
+.test {
+    background-color: red;
+    width: 33%;
 }
