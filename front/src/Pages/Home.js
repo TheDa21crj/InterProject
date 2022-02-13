@@ -28,8 +28,14 @@ export default function Home() {
           <div className={HoCss.test}>
             <Search />
           </div>
-          <div className={HoCss.test}>2</div>
-          <div className={HoCss.test}>3</div>
+          <div className={HoCss.test}>
+            <PieChart />
+            <Table />
+          </div>
+          <div className={HoCss.test}>
+            <Note />
+            <Rule />
+          </div>
         </div>
       </div>
     </div>

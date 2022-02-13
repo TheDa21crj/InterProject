@@ -1,197 +1,198 @@
 #NotemTDiv {
-  width: 400px;
-  margin-left: 40px;
-  margin-top: 3%;
-  height: 45vh;
-  overflow-y: scroll;
+    width: 400px;
+    /* margin-left: 40px; */
+    /* margin-left: 10px; */
+    margin-top: 3%;
+    height: 45vh;
+    overflow-y: scroll;
 }
 
 .NoteTDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  border-style: solid;
-  border-width: 1px;
-  border-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
 }
 
 .NMapDiv {
-  display: flex;
-  flex-direction: column;
-  border-style: solid;
-  border-width: 1px;
-  border-color: grey;
-  word-wrap: break-word;
-  padding: 2%;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    word-wrap: break-word;
+    padding: 2%;
 }
 
 .TitleDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-style: solid;
-  border-width: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .modalMDiv {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(4px);
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    width: 100%;
+    height: 100%;
 }
 
 .popDiv {
-  background-color: white;
-  padding: 3% 7%;
-  border-radius: 10px;
-  box-shadow: 5px 5px 20px grey;
+    background-color: white;
+    padding: 3% 7%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px grey;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #inpTag {
-  outline: none;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 2%;
-  width: 400px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2%;
+    width: 400px;
 }
 
 #TextTag {
-  resize: none;
-  outline: none;
-  width: 100%;
-  padding: 2%;
-  width: 400px;
+    resize: none;
+    outline: none;
+    width: 100%;
+    padding: 2%;
+    width: 400px;
 }
 
 .addIcons {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .DivBtn {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #BtnClose {
-  border-style: solid;
-  border-width: 1px;
-  padding: 2% 3%;
-  background-color: white;
-  border-radius: 10px;
-  font-weight: 700;
-  cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    padding: 2% 3%;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 #AddBtn {
-  border-style: solid;
-  border-width: 1px;
-  padding: 2% 5%;
-  background-color: rgb(65, 65, 255);
-  border-radius: 10px;
-  font-weight: 700;
-  color: white;
-  cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    padding: 2% 5%;
+    background-color: rgb(65, 65, 255);
+    border-radius: 10px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
 }
 
-.NMapDiv:hover > .iconsHover {
-  opacity: 1;
-  visibility: visible;
+.NMapDiv:hover>.iconsHover {
+    opacity: 1;
+    visibility: visible;
 }
 
 .iconsHover {
-  opacity: 0;
-  visibility: hidden;
-  margin-top: -7%;
-  margin-left: 35%;
-  display: flex;
-  width: 30%;
-  background-color: white;
-  backdrop-filter: opacity(0);
-  padding: 2%;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px grey;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -7%;
+    margin-left: 35%;
+    display: flex;
+    width: 30%;
+    background-color: white;
+    backdrop-filter: opacity(0);
+    padding: 2%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px grey;
 }
 
 .iconsHover svg {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 .deleteImg {
-  width: 50px;
+    width: 50px;
 }
 
 .iconEdit {
-  width: 50px;
+    width: 50px;
 }
 
 .idP {
-  display: none;
+    display: none;
 }
 
 #displayEditNone {
-  display: none;
+    display: none;
 }
 
 #displayEdit {
-  display: block;
+    display: block;
 }
 
 .NnoteP {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .NaddIcon {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .NfomDelete {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #title,
 #date {
-  border-style: none;
+    border-style: none;
 }
 
 #title {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 #date {
-  width: 45%;
-  margin-right: 5px;
-  text-align: right;
+    width: 45%;
+    margin-right: 5px;
+    text-align: right;
 }
 
 #des {
-  margin-top: 8px;
-  resize: none;
-  outline: none;
-  border-style: none;
-  width: 100%;
-  height: 50px;
+    margin-top: 8px;
+    resize: none;
+    outline: none;
+    border-style: none;
+    width: 100%;
+    height: 50px;
 }
