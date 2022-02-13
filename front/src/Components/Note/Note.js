@@ -96,76 +96,88 @@ export default function Note() {
           <AddIcon onClick={() => setShow(!show)} className="addIcons" />
         </div>
       </div>
-      <div>
-        {JSONDATA.map((value, key) => {
-          return (
-            <div key={key} className="NMapDiv" onClick={getData} id={value._id}>
-              <div className="TitleDiv">
-                <form method="DELETE" className="NfomDelete">
-                  <input type="text" name="" id="title" value={value.title} />
-                  <input type="text" name="" id="date" value={value.date} />
+      <div className="Nnote">
+        <div>
+          {JSONDATA.map((value, key) => {
+            return (
+              <div
+                key={key}
+                className="NMapDiv"
+                onClick={getData}
+                id={value._id}
+              >
+                <div className="TitleDiv">
+                  <form method="DELETE" className="NfomDelete">
+                    <input type="text" name="" id="title" value={value.title} />
+                    <input type="text" name="" id="date" value={value.date} />
+                  </form>
+                </div>
+                <form method="DELETE">
+                  <textarea
+                    name=""
+                    id="des"
+                    cols="30"
+                    rows="10"
+                    value={value.des}
+                  ></textarea>
                 </form>
+                <div className="iconsHover">
+                  <img
+                    src={img1}
+                    alt=""
+                    className="iconEdit"
+                    onClick={() => editData(value.title, value.des)}
+                  />
+                  <img
+                    src={img0}
+                    alt=""
+                    className="deleteImg"
+                    onClick={() => {
+                      setTDelete(value.title);
+                      deletaData();
+                    }}
+                  />
+                </div>
               </div>
-              <form method="DELETE">
-                <textarea
-                  name=""
-                  id="des"
-                  cols="30"
-                  rows="10"
-                  value={value.des}
-                ></textarea>
-              </form>
-              <div className="iconsHover">
-                <img
-                  src={img1}
-                  alt=""
-                  className="iconEdit"
-                  onClick={() => editData(value.title, value.des)}
-                />
-                <img
-                  src={img0}
-                  alt=""
-                  className="deleteImg"
-                  onClick={() => {
-                    setTDelete(value.title);
-                    deletaData();
-                  }}
-                />
-              </div>
-            </div>
-          );
-        })}
-        {show ? (
-          <div className="modalMDiv">
-            <div className="popDiv">
-              <form className="form">
-                <input type="text" name="" id="inpTag" onChange={setChangeT} />
-                <textarea
-                  name=""
-                  cols="30"
-                  rows="10"
-                  id="TextTag"
-                  onChange={setChangeD}
-                ></textarea>
-              </form>
-              <div className="DivBtn">
-                <button id="BtnClose" onClick={() => setShow(false)}>
-                  Close
-                </button>
-                <button
-                  id="AddBtn"
-                  onClick={(e) => {
-                    postData(e);
-                  }}
-                >
-                  Add
-                </button>
+            );
+          })}
+          {show ? (
+            <div className="modalMDiv">
+              <div className="popDiv">
+                <form className="form">
+                  <input
+                    type="text"
+                    name=""
+                    id="inpTag"
+                    onChange={setChangeT}
+                  />
+                  <textarea
+                    name=""
+                    cols="30"
+                    rows="10"
+                    id="TextTag"
+                    onChange={setChangeD}
+                  ></textarea>
+                </form>
+                <div className="DivBtn">
+                  <button id="BtnClose" onClick={() => setShow(false)}>
+                    Close
+                  </button>
+                  <button
+                    id="AddBtn"
+                    onClick={(e) => {
+                      postData(e);
+                    }}
+                  >
+                    Add
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ) : null}
+          ) : null}
+        </div>
+        {showID && <Edit valNote={showID} valD={showD} idM={setShowID} />}
       </div>
-      {showID && <Edit valNote={showID} valD={showD} idM={setShowID} />}
     </div>
   );
 }

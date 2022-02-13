@@ -2,8 +2,30 @@
     width: 400px;
     margin-top: 3%;
     height: 45vh;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+}
+
+#NotemTDiv::-webkit-scrollbar {
+    display: none;
+}
+
+.Nnote {
+    height: 37vh;
     overflow-y: scroll;
 }
+
+
+/* .NnoteChild1 {
+    height: 20vh;
+    background-color: red;
+}
+
+.NnoteChild2 {
+    height: 20vh;
+    background-color: yellow;
+} */
 
 .NoteTDiv {
     display: flex;
