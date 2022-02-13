@@ -12,6 +12,10 @@
     overflow-y: scroll;
 }
 
+.Nnote::-webkit-scrollbar {
+    display: none;
+}
+
 .NoteTDiv {
     display: flex;
     flex-direction: row;
