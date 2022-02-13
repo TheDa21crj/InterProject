@@ -13,7 +13,7 @@
 .test {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: red;
-    width: 33%;
+    justify-content: space-evenly;
+    /* background-color: red; */
+    /* width: 33%; */
 }
