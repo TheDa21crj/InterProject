@@ -11,7 +11,7 @@ table {
 
 th,
 td {
-    border: 1px solid black;
+    border: 1px solid rgb(107, 107, 107);
 }
 
 .table {
@@ -34,4 +34,17 @@ td {
 
 .topRow {
     background-color: rgb(255, 236, 125);
+}
+
+.greyRow {
+    background-color: rgb(231, 231, 231);
+}
+
+tr {
+    transition: all 0.3s;
+}
+
+tr:hover {
+    /* color: white; */
+    background-color: rgb(243, 230, 156);
 }

@@ -44,7 +44,7 @@ export default function CTable(props) {
           <th>{props.quantity1}</th>
           <th>{price1}</th>
         </tr>
-        <tr>
+        <tr className="greyRow">
           <th>
             <input type="checkbox" value="" />
           </th>
@@ -60,7 +60,7 @@ export default function CTable(props) {
           <th>{props.quantity3}</th>
           <th>{price3}</th>
         </tr>
-        <tr>
+        <tr className="greyRow">
           <th></th>
           <th></th>
           <th>Total</th>
