@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap");
 .PieChartmDiv {
     transition: all 0.3s;
     z-index: 2;
@@ -25,8 +26,7 @@
 #item1,
 #item2,
 #item3,
-#item4,
-#item5 {
+#item4 {
     display: inline-block;
     width: 0.6rem;
     height: 0.6rem;
@@ -69,3 +69,7 @@
     justify-content: center;
     align-items: center;
 }
+
+
+/* .chatKey p {
+} */
