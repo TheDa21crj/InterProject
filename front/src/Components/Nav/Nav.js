@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import NCss from "./CSS/Nav.module.css";
 import "./CSS/Nav.css";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import { TweenMax, Power3 } from "gsap";
 
 export default function Nav() {
   return (
