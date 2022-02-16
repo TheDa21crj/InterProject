@@ -32,17 +32,18 @@
 .NMapDiv {
     display: flex;
     flex-direction: column;
+    padding: 2%;
     border-style: solid;
     border-width: 0px 0px 1px 0px;
     border-color: grey;
     word-wrap: break-word;
-    padding: 2%;
 }
 
 .TitleDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1%;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
