@@ -9,7 +9,8 @@ import { gsap } from "gsap";
 export default function Nav() {
   useEffect(() => {
     gsap.to("#h1Wel", { y: "0%", duration: 1 });
-    gsap.to("#slider", { y: "-100%", duration: 2, delay: 0.75 });
+    gsap.to("#slider", { y: "-100%", duration: 2, delay: 0.5 });
+    gsap.to("#NavBackDrop", { y: "-100%", duration: 1 }, "-=1");
   }, []);
 
   return (
