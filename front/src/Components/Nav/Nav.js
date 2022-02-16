@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import NCss from "./CSS/Nav.module.css";
 import "./CSS/Nav.css";
