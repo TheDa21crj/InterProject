@@ -20,12 +20,20 @@
     overflow: hidden;
 }
 
-#h1Wel {
+.h1Wel {
     transform: translateY(100%);
     font-size: 5rem;
 }
 
+.h1WelSlide {
+    font-size: 5rem;
+}
+
 #slider {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-end;
     position: absolute;
     top: 0;
     left: 0;
