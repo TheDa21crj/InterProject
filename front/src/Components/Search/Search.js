@@ -126,6 +126,7 @@ export default function Search() {
                         name=""
                         className="inpValue"
                         value={value.name}
+                        spellcheck="false"
                       />
                     </form>
                     <div className="WiconsDiv">
