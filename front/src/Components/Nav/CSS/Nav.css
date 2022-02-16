@@ -2,7 +2,7 @@
     z-index: 100;
 }
 
-.NavBackDrop {
+#NavBackDrop {
     position: absolute;
     top: 0;
     left: 0;
@@ -14,11 +14,11 @@
     align-items: center;
 }
 
-.h1Wel {
+#h1Wel {
     font-size: 5rem;
 }
 
-.slider {
+#slider {
     position: absolute;
     top: 0;
     left: 0;
