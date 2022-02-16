@@ -15,6 +15,9 @@ export default function Nav() {
         </Link>
         <ArrowForwardIosIcon fontSize="large" id={NCss.ArrowForwardIosIcon} />
       </div>
+      <div className="NavBackDrop">
+        <h1>Welcome</h1>
+      </div>
     </div>
   );
 }
