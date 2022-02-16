@@ -6,6 +6,11 @@
     margin-top: 3%;
     height: 45vh;
     overflow-y: scroll;
+    border-radius: 5px;
+}
+
+.RmDiv::-webkit-scrollbar {
+    display: none;
 }
 
 #RtickIcon,
@@ -33,6 +38,11 @@
     border-style: solid;
     border-width: 0px 0px 1px 0px;
     border-color: grey;
+}
+
+.RimgDiv {
+    display: flex;
+    align-items: center;
 }
 
 .ruleP {
