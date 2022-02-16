@@ -108,8 +108,20 @@ export default function Note() {
               >
                 <div className="TitleDiv">
                   <form method="DELETE" className="NfomDelete">
-                    <input type="text" name="" id="title" value={value.title} />
-                    <input type="text" name="" id="date" value={value.date} />
+                    <input
+                      type="text"
+                      name=""
+                      id="title"
+                      value={value.title}
+                      spellcheck="false"
+                    />
+                    <input
+                      type="text"
+                      name=""
+                      id="date"
+                      value={value.date}
+                      spellcheck="false"
+                    />
                   </form>
                 </div>
                 <form method="DELETE">
