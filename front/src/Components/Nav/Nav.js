@@ -27,7 +27,9 @@ export default function Nav() {
           <h1 id="h1Wel">Welcome</h1>
         </div>
       </div>
-      <div id="slider">To The Trading</div>
+      <div id="slider">
+        <h1>To The Trading</h1>
+      </div>
     </div>
   );
 }
