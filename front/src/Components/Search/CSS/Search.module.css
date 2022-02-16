@@ -1,7 +1,6 @@
 .sMdiv {
     width: 400px;
     height: 45vh;
-    overflow-y: hidden;
     border-style: solid;
     border-width: 1px;
     border-color: grey;
@@ -17,6 +16,7 @@
 }
 
 .scrollDiv {
+    height: 38vh;
     overflow-y: scroll;
 }
 
