@@ -12,9 +12,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.h1WelPar {
+    background-color: transparent;
+    overflow: hidden;
 }
 
 #h1Wel {
+    transform: translateY(100%);
     font-size: 5rem;
 }
 

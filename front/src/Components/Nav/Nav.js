@@ -8,8 +8,10 @@ import { gsap } from "gsap";
 
 export default function Nav() {
   useEffect(() => {
-    gsap.to("#slider", { y: "-100%", duration: 2 });
+    gsap.to("#h1Wel", { y: "0%", duration: 1 });
+    gsap.to("#slider", { y: "-100%", duration: 2, delay: 0.75 });
   }, []);
+
   return (
     <div className={NCss.NmDiv}>
       <div className={NCss.mcontent}>
@@ -20,7 +22,9 @@ export default function Nav() {
         <ArrowForwardIosIcon fontSize="large" id={NCss.ArrowForwardIosIcon} />
       </div>
       <div id="NavBackDrop">
-        <h1 id="h1Wel">Welcome</h1>
+        <div className="h1WelPar">
+          <h1 id="h1Wel">Welcome</h1>
+        </div>
       </div>
       <div id="slider"></div>
     </div>
