@@ -26,6 +26,8 @@
 }
 
 .h1WelSlide {
+    color: rgb(255, 229, 85);
+    transform: translateY(100%);
     font-size: 5rem;
 }
 

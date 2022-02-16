@@ -91,7 +91,7 @@ export default function Rule() {
     <div onClick={getData} className="RmDiv">
       <div className="iconsTile">
         <div className="ruleP">Rules</div>
-        <div>
+        <div className="RimgDiv">
           <img
             src={tickIcon}
             alt=""

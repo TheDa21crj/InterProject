@@ -8,7 +8,8 @@ import { gsap } from "gsap";
 
 export default function Nav() {
   useEffect(() => {
-    gsap.to(".h1Wel", { y: "0%", duration: 1 });
+    gsap.to(".h1Wel", { y: "0%", duration: 1, stagger: 0.25 });
+    gsap.to(".h1WelSlide", { y: "0%", duration: 1, stagger: 0.25 }, "-=1");
     gsap.to("#slider", { y: "-100%", duration: 2, delay: 0.75 });
     gsap.to("#NavBackDrop", { y: "-100%", duration: 1 }, "-=1");
   }, []);
@@ -25,11 +26,10 @@ export default function Nav() {
       <div id="NavBackDrop">
         <div className="h1WelPar">
           <h1 className="h1Wel">Welcome</h1>
+          <h1 className="h1WelSlide">To The Trading</h1>
         </div>
       </div>
-      <div id="slider">
-        <h1 className="h1WelSlide">To The Trading</h1>
-      </div>
+      <div id="slider"></div>
     </div>
   );
 }
