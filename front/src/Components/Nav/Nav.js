@@ -18,6 +18,7 @@ export default function Nav() {
       <div className="NavBackDrop">
         <h1 className="h1Wel">Welcome</h1>
       </div>
+      <div className="slider"></div>
     </div>
   );
 }
