@@ -127,6 +127,7 @@ export default function Rule() {
                         name=""
                         className="rule"
                         value={value.rule}
+                        spellcheck="false"
                       />
                     </form>
                   </div>
@@ -145,6 +146,7 @@ export default function Rule() {
                         name=""
                         className="rule"
                         value={value.rule}
+                        spellcheck="false"
                       />
                     </form>
                   </div>
