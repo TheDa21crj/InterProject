@@ -77,8 +77,9 @@ export default function Search() {
           id={SrCss.searchInp}
           placeholder="Search"
           onChange={filterData}
-        />
+        />{" "}
         <div className={SrCss.scrollDiv}>
+          {" "}
           {JSONDATAS.filter((value) => {
             if (search === "") {
               return value;
@@ -97,23 +98,25 @@ export default function Search() {
                     id="inpValue"
                     className={SrCss.formImp}
                     value={value.name}
+                    spellcheck="false"
                   />
                   <div className={SrCss.hoverIcons}>
                     <CheckIcon
                       onClick={() => {
                         postData();
                       }}
-                    />
-                    <AddIcon onClick={() => setData(value.name)} />
-                  </div>
-                </form>
+                    />{" "}
+                    <AddIcon onClick={() => setData(value.name)} />{" "}
+                  </div>{" "}
+                </form>{" "}
               </div>
             );
-          })}
-        </div>
-      </div>
+          })}{" "}
+        </div>{" "}
+      </div>{" "}
       <div onClick={getData} className="WatchmDiv">
         <div>
+          {" "}
           {JSONDATA.map((value, key) => {
             return (
               <div>
@@ -125,8 +128,8 @@ export default function Search() {
                         name=""
                         className="inpValue"
                         value={value.name}
-                      />
-                    </form>
+                      />{" "}
+                    </form>{" "}
                     <div className="WiconsDiv">
                       <ShareIcon />
                       <EditIcon />
@@ -135,17 +138,17 @@ export default function Search() {
                         alt=""
                         className="deleteImg"
                         onClick={() => deletaData()}
-                      />
-                      <CheckIcon onClick={() => setDelete(value.name)} />
+                      />{" "}
+                      <CheckIcon onClick={() => setDelete(value.name)} />{" "}
                       <MoreHorizIcon />
-                    </div>
-                  </p>
-                </div>
+                    </div>{" "}
+                  </p>{" "}
+                </div>{" "}
               </div>
             );
-          })}
-        </div>
-      </div>
+          })}{" "}
+        </div>{" "}
+      </div>{" "}
     </div>
   );
 }
