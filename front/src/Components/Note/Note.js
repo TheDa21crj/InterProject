@@ -131,6 +131,7 @@ export default function Note() {
                     cols="30"
                     rows="10"
                     value={value.des}
+                    spellcheck="false"
                   ></textarea>
                 </form>
                 <div className="iconsHover">
