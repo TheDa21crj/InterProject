@@ -4,9 +4,12 @@ import NCss from "./CSS/Nav.module.css";
 import "./CSS/Nav.css";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import { TweenMax, Power3 } from "gsap";
+import { gsap } from "gsap";
 
 export default function Nav() {
+  useEffect(() => {
+    gsap.to("#slider", { y: "-100%", duration: 2 });
+  }, []);
   return (
     <div className={NCss.NmDiv}>
       <div className={NCss.mcontent}>
