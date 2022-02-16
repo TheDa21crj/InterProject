@@ -162,6 +162,7 @@ export default function Note() {
                     type="text"
                     name=""
                     id="inpTag"
+                    placeholder="Title"
                     onChange={setChangeT}
                   />
                   <textarea
@@ -169,6 +170,7 @@ export default function Note() {
                     cols="30"
                     rows="10"
                     id="TextTag"
+                    placeholder="Description"
                     onChange={setChangeD}
                   ></textarea>
                 </form>
