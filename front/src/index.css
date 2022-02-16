@@ -26,13 +26,13 @@ code {
 
 ::-webkit-scrollbar-track {
     /* Track */
-    box-shadow: inset 0 0 5px grey;
+    box-shadow: inset 0 0 5px rgb(207, 207, 207);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     /* Handle */
-    background: rgb(255, 225, 58);
+    background: rgb(255, 229, 85);
     border-radius: 10px;
 }
 
