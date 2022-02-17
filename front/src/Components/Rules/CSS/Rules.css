@@ -5,7 +5,6 @@
     width: 400px;
     margin-top: 3%;
     height: 45vh;
-    overflow-y: scroll;
     border-radius: 5px;
 }
 
@@ -150,4 +149,13 @@
 
 input[type="checkbox"]:checked {
     accent-color: rgb(255, 229, 85);
+}
+
+.RScroolDiv {
+    height: 38vh;
+    overflow: scroll;
+}
+
+.RScroolDiv::-webkit-scrollbar {
+    display: none;
 }

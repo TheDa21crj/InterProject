@@ -108,7 +108,7 @@ export default function Rule() {
           <DeleteIcon fontSize="large" id="RdeleteIcon" onClick={deleteData} />
         </div>
       </div>
-      <div>
+      <div className="RScroolDiv">
         {JSONDATA.map((value, key) => {
           return (
             <div>
