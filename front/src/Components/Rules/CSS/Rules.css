@@ -148,3 +148,7 @@
     border-width: 0px 0px 1px 0px;
     border-color: rgb(214, 214, 214);
 }
+
+input[type="checkbox"]:checked {
+    accent-color: rgb(255, 229, 85);
+}
