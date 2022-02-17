@@ -95,34 +95,16 @@ export default function Rule() {
       <div className="iconsTile">
         <div className="ruleP">Rules</div>
         <div className="RimgDiv">
-          {/* <img
-            src={tickIcon}
-            alt=""
-            id="RtickIcon"
-            onClick={() => setCheck(!check)}
-          /> */}
           <CheckIcon
             fontSize="large"
             id="RtickIcon"
             onClick={() => setCheck(!check)}
           />
-          {/* <img
-            src={addIcon}
-            alt=""
-            id="RaddIcon"
-            onClick={() => setShow(!show)}
-          /> */}
           <AddIcon
             fontSize="large"
             id="RaddIcon"
             onClick={() => setShow(!show)}
           />
-          {/* <img 
-          src={deleteIcon} 
-          alt="" 
-          id="RdeleteIcon" 
-          onClick={deleteData} 
-          /> */}
           <DeleteIcon fontSize="large" id="RdeleteIcon" onClick={deleteData} />
         </div>
       </div>
