@@ -22,6 +22,7 @@
 #RdeleteIcon {
     width: 70px;
     margin-left: -10px;
+    cursor: pointer;
 }
 
 .iconsTile {
@@ -130,11 +131,17 @@
 }
 
 .rule {
+    text-transform: capitalize;
     background-color: transparent;
     display: flex;
     outline: none;
     border-style: none;
     font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.rule:hover {
+    text-shadow: 2px 2px 5px rgb(71, 71, 71);
 }
 
 .RformDelete {
