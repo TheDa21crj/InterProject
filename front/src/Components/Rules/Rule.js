@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import JSONDATA from "./../../Data/Showrule.json";
 import "./CSS/Rules.css";
 import CheckIcon from "@material-ui/icons/Check";
-import tickIcon from "./../../Req img/tick.jpg";
-import addIcon from "./../../Req img/add.jpg";
-import deleteIcon from "./../../Req img/bin.jpg";
+import AddIcon from "@material-ui/icons/Add";
+import DeleteIcon from "@material-ui/icons/Delete";
+// import tickIcon from "./../../Req img/tick.jpg";
+// import addIcon from "./../../Req img/add.jpg";
+// import deleteIcon from "./../../Req img/bin.jpg";
 
 export default function Rule() {
   const [show, setShow] = useState(false);
@@ -99,14 +101,29 @@ export default function Rule() {
             id="RtickIcon"
             onClick={() => setCheck(!check)}
           /> */}
-          <CheckIcon id="RtickIcon" onClick={() => setCheck(!check)} />
-          <img
+          <CheckIcon
+            fontSize="large"
+            id="RtickIcon"
+            onClick={() => setCheck(!check)}
+          />
+          {/* <img
             src={addIcon}
             alt=""
             id="RaddIcon"
             onClick={() => setShow(!show)}
+          /> */}
+          <AddIcon
+            fontSize="large"
+            id="RaddIcon"
+            onClick={() => setShow(!show)}
           />
-          <img src={deleteIcon} alt="" id="RdeleteIcon" onClick={deleteData} />
+          {/* <img 
+          src={deleteIcon} 
+          alt="" 
+          id="RdeleteIcon" 
+          onClick={deleteData} 
+          /> */}
+          <DeleteIcon fontSize="large" id="RdeleteIcon" onClick={deleteData} />
         </div>
       </div>
       <div>
