@@ -4,9 +4,6 @@ import "./CSS/Rules.css";
 import CheckIcon from "@material-ui/icons/Check";
 import AddIcon from "@material-ui/icons/Add";
 import DeleteIcon from "@material-ui/icons/Delete";
-// import tickIcon from "./../../Req img/tick.jpg";
-// import addIcon from "./../../Req img/add.jpg";
-// import deleteIcon from "./../../Req img/bin.jpg";
 
 export default function Rule() {
   const [show, setShow] = useState(false);
