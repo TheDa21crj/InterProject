@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import JSONDATA from "./../../Data/Showrule.json";
 import "./CSS/Rules.css";
+import CheckIcon from "@material-ui/icons/Check";
 import tickIcon from "./../../Req img/tick.jpg";
 import addIcon from "./../../Req img/add.jpg";
 import deleteIcon from "./../../Req img/bin.jpg";
@@ -92,12 +93,13 @@ export default function Rule() {
       <div className="iconsTile">
         <div className="ruleP">Rules</div>
         <div className="RimgDiv">
-          <img
+          {/* <img
             src={tickIcon}
             alt=""
             id="RtickIcon"
             onClick={() => setCheck(!check)}
-          />
+          /> */}
+          <CheckIcon id="RtickIcon" onClick={() => setCheck(!check)} />
           <img
             src={addIcon}
             alt=""
