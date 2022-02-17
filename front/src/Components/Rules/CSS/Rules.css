@@ -130,6 +130,7 @@
 }
 
 .rule {
+    background-color: transparent;
     display: flex;
     outline: none;
     border-style: none;
