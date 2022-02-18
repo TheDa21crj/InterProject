@@ -48,6 +48,10 @@ In the search box the used can search anything and depending on the the input va
 
 In the Middle section a pie chart is displayed using radial-gradient.
 
+```bash
+    radial-gradient(circle closest-side, transparent 60%, white 0), conic-gradient( from 180deg, #ee5253 0, #ee5253 35%, #277921 0, #277921 60%, #f368e0 0, #f368e0 75%, #0abde3 0, #0abde3 100%)
+```
+
 ## Tables
 
 Just below the pie chart the table shows in which the prices of the items change every second and depending on the prices of the items the Total Amount also changes.
