@@ -55,10 +55,10 @@ In the search box the used can search anything and depending on the the input va
 
 ```bash
      {JSONDATA.filter((value) => {
-           //conditions
+            /* conditions */
           }).map((value, key) => {
             return (
-              //JSX code
+                {/* JSX Code */}
             );
           })}
 ```
