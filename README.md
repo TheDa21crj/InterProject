@@ -1,27 +1,39 @@
-
 # Trading
 
 This project has a fully functional backend and frontend. The frontend comprises of Reactjs and the backend is developed using Nodejs which includes MongoDB as the Database.The icons are imported from material-ui and for the amination gsap was used.The Backend includes express-validator for server-side data validation.
 
-## Installation
+## Tech Stack
 
-Clone the Repo and install all the dependencies
+**Client:** React, Redux, TailwindCSS
+
+**Server:** Node, Express
+
+**DataBase:**  MongoDb
+## Run Locally
+
+Clone the project
 
 ```bash
-  npm install 
+  git clone git@github.com:TheDa21crj/Trading.git
+```
+
+Go to the project directory
+
+```bash
   cd Trading
 ```
-    
-## Deployment
 
- Concurrently was used for running Front-end and the Backend with one Single command.
- 
-To deploy this project run
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
 
 ```bash
   npm run dev
 ```
-
 
 # About the Project
 
@@ -41,3 +53,7 @@ In the notes section the used can add notes using the '+' icon and then the ente
 
 ## Rules
 In the Rules section the user can click on '+' to added rules which is similar to the notes section. By clicking on the tick icon, the user can select all the rules and then if the delete icon is clicked then all the rules will be deleted. To delete the rules individually users just have to select the checkbox corresponding to that rule.
+## Author
+
+- [@TheDa21crj](https://github.com/TheDa21crj)
+
