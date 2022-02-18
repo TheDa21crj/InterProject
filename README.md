@@ -40,9 +40,30 @@ Start the server
 
 This project has 5 parts where each part is independent. The different parts are the search box and the watchlist, pie char, table, notes, rules.
 
+The project uses the gsap to improve the user experience.
+
+```bash
+    gsap.to(".h1Wel", { y: "0%", duration: 1, stagger: 0.25 });
+    gsap.to(".h1WelSlide", { y: "0%", duration: 1, stagger: 0.25 }, "-=1");
+    gsap.to("#slider", { y: "-100%", duration: 2, delay: 0.75 });
+    gsap.to("#NavBackDrop", { y: "-100%", duration: 1 }, "-=1");
+```
+
 ## Search Box
 
-In the search box the used can search anything and depending on the the input value the user will get filter result and the the used can add the result to watchlist by first clicking on the plus icon and then on tick. In the watchlist the user will be also able to delete the items form the list (click on delete).
+In the search box the used can search anything and depending on the the input value the user will get filter result this was done using filter() method.
+
+```bash
+     {JSONDATA.filter((value) => {
+           //conditions
+          }).map((value, key) => {
+            return (
+              //JSX code
+            );
+          })}
+```
+
+The used can add the result to watchlist by first clicking on the plus icon and then on tick. In the watchlist the user will be also able to delete the items form the list (click on delete).
 
 ## Pie Chart
 
